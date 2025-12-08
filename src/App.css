@@ -1,0 +1,68 @@
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  max-width: 2000px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Remove Google Translate tooltip & highlight */
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  display: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Kill Balloon Popup */
+iframe.goog-te-balloon-frame,
+iframe.goog-te-banner-frame,
+iframe.goog-te-menu-frame,
+iframe.goog-te-gadget-frame {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+/* Google Translate popups hide */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-balloon-frame,
+.goog-text-highlight {
+    display: none !important;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+    display: none !important;
+}
+
+/* Body shift hone se rokta hai */
+body {
+    top: 0 !important;
+}
+
+/* Custom Animation */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-fadeZoom {
+    animation: fadeZoom 0.8s ease-out forwards;
+  }
+}
