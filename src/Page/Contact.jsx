@@ -376,9 +376,14 @@ export default function ContactHeader() {
                         <div className="flex items-center gap-3">
                           <div className="relative">
                             <div className="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin"></div>
-                            <div className="absolute top-0 left-0 w-6 h-6 border-3 border-transparent border-t-emerald-200 rounded-full animate-spin" style={{animationDuration: '0.8s'}}></div>
+                            <div
+                              className="absolute top-0 left-0 w-6 h-6 border-3 border-transparent border-t-emerald-200 rounded-full animate-spin"
+                              style={{ animationDuration: "0.8s" }}
+                            ></div>
                           </div>
-                          <span className="animate-pulse">Submitting your message...</span>
+                          <span className="animate-pulse">
+                            Submitting your message...
+                          </span>
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
                       </>
@@ -399,6 +404,8 @@ export default function ContactHeader() {
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-green-50"></div>
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-200/40 rounded-full blur-3xl opacity-40"></div>
 
+        {/* commect detail */}
+
         <div className="relative container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             {/* Company Info */}
@@ -414,21 +421,32 @@ export default function ContactHeader() {
             {/* Contact Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               {/* Email */}
-              <div className="p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2">
+              <a
+                href="mailto:info@worknestconnect.com"
+                className="block p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2"
+              >
                 <FaEnvelope className="text-4xl text-emerald-600 mx-auto mb-4" />
                 <h3 className="font-bold text-xl text-gray-800">Email</h3>
                 <p className="text-gray-600 mt-2">info@worknestconnect.com</p>
-              </div>
+              </a>
 
               {/* Phone */}
-              <div className="p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2">
+              <a
+                href="tel:+97431175515"
+                className="block p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2"
+              >
                 <FaPhone className="text-4xl text-emerald-600 mx-auto mb-4" />
                 <h3 className="font-bold text-xl text-gray-800">Phone</h3>
                 <p className="text-gray-600 mt-2">+974 3117 5515</p>
-              </div>
+              </a>
 
-              {/* Location (Updated with Full Address) */}
-              <div className="p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2">
+              {/* Location */}
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=1st+floor,+Apartment+4+Building+No.+33,+Street+180,+Zone+55,+Al+Rayyan,+Doha,+Qatar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2"
+              >
                 <FaMapMarkerAlt className="text-4xl text-emerald-600 mx-auto mb-4" />
                 <h3 className="font-bold text-xl text-gray-800">Location</h3>
                 <p className="text-gray-600 mt-3 leading-relaxed">
@@ -437,86 +455,73 @@ export default function ContactHeader() {
                   <br />
                   Zone 55, Al Rayyan – Doha, Qatar
                 </p>
-              </div>
+              </a>
             </div>
 
             {/* Social Icons */}
             <h3 className="text-3xl font-bold text-gray-800 mb-6">Follow Us</h3>
 
             <div className="flex justify-center flex-wrap gap-6">
-              {/* Instagram */}
               <a
                 href="https://www.instagram.com/worknestconnect"
                 target="_blank"
-                className="w-14 h-14 flex items-center justify-center 
-        bg-green-600 text-white rounded-full shadow-lg
-        hover:bg-green-700 hover:scale-110 transition-all duration-300"
+                rel="noreferrer"
+                className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
               >
                 <FaInstagram className="w-7 h-7" />
               </a>
 
-              {/* Facebook */}
               <a
                 href="https://www.facebook.com"
                 target="_blank"
-                className="w-14 h-14 flex items-center justify-center 
-        bg-green-600 text-white rounded-full shadow-lg
-        hover:bg-green-700 hover:scale-110 transition-all duration-300"
+                rel="noreferrer"
+                className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
               >
                 <FaFacebookF className="w-7 h-7" />
               </a>
 
-              {/* Twitter / X */}
               <a
                 href="https://www.x.com"
                 target="_blank"
-                className="w-14 h-14 flex items-center justify-center 
-        bg-green-600 text-white rounded-full shadow-lg
-        hover:bg-green-700 hover:scale-110 transition-all duration-300"
+                rel="noreferrer"
+                className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
               >
                 <FaTwitter className="w-7 h-7" />
               </a>
 
-              {/* YouTube */}
               <a
                 href="https://www.youtube.com"
                 target="_blank"
-                className="w-14 h-14 flex items-center justify-center 
-        bg-green-600 text-white rounded-full shadow-lg
-        hover:bg-green-700 hover:scale-110 transition-all duration-300"
+                rel="noreferrer"
+                className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
               >
                 <FaYoutube className="w-7 h-7" />
               </a>
 
-              {/* TikTok */}
               <a
                 href="https://www.tiktok.com/@worknestconnect?lang=en"
                 target="_blank"
-                className="w-14 h-14 flex items-center justify-center 
-        bg-green-600 text-white rounded-full shadow-lg
-        hover:bg-green-700 hover:scale-110 transition-all duration-300"
+                rel="noreferrer"
+                className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
               >
                 <FaTiktok className="w-7 h-7" />
               </a>
 
-              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/company/worknestconnect"
                 target="_blank"
-                className="w-14 h-14 flex items-center justify-center 
-        bg-green-600 text-white rounded-full shadow-lg
-        hover:bg-green-700 hover:scale-110 transition-all duration-300"
+                rel="noreferrer"
+                className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
               >
                 <FaLinkedinIn className="w-7 h-7" />
               </a>
             </div>
-
           </div>
         </div>
       </section>
 
       <Footer />
-      
+
       <style>{`
         @keyframes shimmer {
           0% { transform: translateX(-100%); }

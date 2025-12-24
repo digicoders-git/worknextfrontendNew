@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaGlobe,
+  FaPhoneAlt,
   FaLinkedin,
 } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
@@ -157,6 +158,15 @@ const Footer = () => {
                     info@worknestconnect.com
                   </a>
                 </li>
+                <li className="flex justify-center lg:justify-start items-center">
+                  <FaPhoneAlt className="mr-2 text-green-400" />
+                  <a
+                    href="tel:+97431175515"
+                    className="hover:text-green-400 transition"
+                  >
+                    +974 3117 5515
+                  </a>
+                </li>
 
                 <li className="flex justify-center lg:justify-start items-center">
                   <FaMapMarkerAlt className="mr-2 text-green-400 text-3xl" />
@@ -170,6 +180,8 @@ const Footer = () => {
                     Al Rayyan - Doha, Qatar
                   </a>
                 </li>
+
+                {/* Phone Number */}
 
                 <li className="flex justify-center lg:justify-start items-center">
                   <FaGlobe className="mr-2 text-green-400" />
