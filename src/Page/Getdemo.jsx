@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-import { Check, Megaphone, Palette, Laptop, Bot, TrendingUp, Globe, Mail, Phone, Instagram, Facebook, Twitter, Youtube, CalendarCheck, BarChart3, X } from "lucide-react";
+import { Check, Megaphone, Palette, Laptop, Bot, TrendingUp, Globe, Mail, Phone, Instagram, Facebook, Twitter, Youtube, CalendarCheck, BarChart3, X, Database } from "lucide-react";
 import Footer from "../Component/Footer";
 import axios from "axios";
 import ContactSection from "../Component/GetDemoComponent";
+import { Link } from "react-router-dom";
 const DemoPage = () => {
   const api_url = import.meta.env.VITE_API_URL;
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,7 +41,7 @@ const DemoPage = () => {
         message: "",
       });
     } catch (error) {
-      toast.error("Failed to submit form. Please try again.");
+      toast.error("Failed to submit form. Please try again." +error);
     } finally {
       setIsLoading(false);
     }
@@ -114,6 +115,20 @@ const DemoPage = () => {
       ],
       gradient: "from-orange-500 to-orange-600",
     },
+    {
+      Icon: Database,
+      title: "Enterprise Resource Planning (ERP) System",
+      description: "Smart business management systems to streamline operations and improve efficiency.",
+      features: [
+        "Finance & Accounting",
+        "HR & Payroll",
+        "Inventory & Procurement",
+        "Sales & CRM",
+        "Reporting & Analytics",
+        "Workflow Automation",
+      ],
+      gradient: "from-indigo-500 to-indigo-600",
+    },
   ];
 
   return (
@@ -159,23 +174,23 @@ const DemoPage = () => {
                   <CalendarCheck className="text-xl" />
                   <span>Request Free Demo</span>
                 </button>
-                <a
-                  href="#data"
+                <Link
+                  to="/project"
                   className="border-2 border-emerald-500 text-emerald-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-emerald-50/20 transition-all duration-300 "
                   id="#Service"
                 >
                   View Our Work
-                </a>
+                </Link>
               </div>
 
               {/* STATS */}
               <div className="flex items-center mt-12 space-x-8 text-emerald-200">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">500+</div>
+                  <div className="text-2xl font-bold text-white">40+</div>
                   <div className="text-sm">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">98%</div>
+                  <div className="text-2xl font-bold text-white">99%</div>
                   <div className="text-sm">Client Satisfaction</div>
                 </div>
                 <div className="text-center">

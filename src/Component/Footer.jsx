@@ -10,6 +10,7 @@ import {
   FaGlobe,
   FaPhoneAlt,
   FaLinkedin,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -29,6 +30,8 @@ const Footer = () => {
   const navigation = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
+    { name: "All Services", link: "/services" },
+    { name: "Project", link: "/Project" },
     { name: "Contact", link: "/contact" },
     { name: "Careers", link: "/Careers" },
     { name: "Get Demo", link: "/GetDemo" },
@@ -78,6 +81,10 @@ const Footer = () => {
                 {
                   icon: <FaTiktok />,
                   link: "https://www.tiktok.com/@worknestconnect?lang=en",
+                },
+                {
+                  icon: <FaWhatsapp />,
+                  link: "https://wa.me/97431175515",
                 },
               ].map((item, i) => (
                 <a

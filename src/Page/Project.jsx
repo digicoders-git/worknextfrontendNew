@@ -27,6 +27,7 @@ import {
   BarChart3,
   CheckCircle,
   ThumbsUp,
+     
 } from "lucide-react";
 import Footer from "../Component/Footer";
 import TransformBussnation from "../Component/TransformBussnation";
@@ -61,6 +62,7 @@ const Project = () => {
       duration: "6 months",
       year: "2024",
       status: "Completed",
+      
       link: "#",
       featured: true,
       results: "300% increase in sales, 50% faster load times",
@@ -236,37 +238,36 @@ const Project = () => {
     },
   ];
 
-  const stats = [
-    {
-      number: "200+",
-      label: "Projects Completed",
-      icon: Award,
-      suffix: "",
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      number: "99%",
-      label: "Client Satisfaction",
-      icon: Star,
-      suffix: "",
-      color: "from-green-500 to-lime-500",
-    },
-    {
-      number: "100+",
-      label: "Happy Clients",
-      icon: Users,
-      suffix: "",
-      color: "from-emerald-500 to-teal-500",
-    },
-    {
-      number: "5+",
-      label: "Years Experience",
-      icon: Calendar,
-      suffix: "",
-      color: "from-lime-500 to-green-500",
-    },
-  ];
-
+const stats = [
+  {
+    number: "40+",
+    label: "Projects Completed",
+    icon: Award, // achievement / success
+    suffix: "",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    number: "99%",
+    label: "Client Satisfaction",
+    icon: Star, // rating / satisfaction
+    suffix: "",
+    color: "from-green-500 to-lime-500",
+  },
+  {
+    number: "100%",
+    label: "Quality Execution",
+    icon: CheckCircle, // quality / approved work
+    suffix: "",
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+    number: "100%",
+    label: "Trusted Business Partner",
+    icon: Handshake, // trust / partnership
+    suffix: "",
+    color: "from-lime-500 to-green-500",
+  },
+];
   const technologies = [
     { name: "React", icon: Code, projects: 45, level: 95 },
     { name: "Node.js", icon: Database, projects: 38, level: 90 },
@@ -281,8 +282,8 @@ const Project = () => {
   const achievements = [
     {
       icon: Trophy,
-      title: "Best Web Development Agency 2024",
-      description: "Awarded by Tech Excellence Awards",
+      title: "Trusted Web Development Experts",
+      description: "High-quality web development you can trust",
       year: "2024",
     },
     {
@@ -295,13 +296,13 @@ const Project = () => {
       icon: Lightbulb,
       title: "Innovation Leader",
       description: "Recognized for cutting-edge technology solutions",
-      year: "2023",
+      year: "Ongoing",
     },
     {
       icon: Handshake,
       title: "Client Partnership Excellence",
       description: "Long-term relationships with 95% client retention",
-      year: "2024",
+      year: "2025",
     },
   ];
 
@@ -338,7 +339,7 @@ const Project = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-full text-sm font-bold mb-8 shadow-lg">
               <Rocket className="w-4 h-4 mr-2 animate-pulse" />
-              Explore 200+ Successful Projects
+              Explore 40+ Successful Projects
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">

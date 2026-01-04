@@ -238,7 +238,7 @@ const BusinessConsulting = () => {
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
               </div>
               <span className="text-green-300 font-semibold drop-shadow-sm">
-                Expert Business Consulting Services
+                Professional Business Consulting Services in Doha
               </span>
             </div>
           </div>
@@ -254,7 +254,7 @@ const BusinessConsulting = () => {
           </h1>
 
           {/* Sub Text */}
-          <p className="text-2xl md:text-xl mb-8 max-w-3xl mx-auto font-light text-white leading-relaxed drop-shadow-sm">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light text-white leading-relaxed drop-shadow-sm">
             Transform your business vision into reality with our comprehensive
             consulting services. From setup to expansion, we provide the
             expertise you need to succeed.
@@ -278,7 +278,7 @@ const BusinessConsulting = () => {
               className="group inline-flex items-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border-2 border-white/30 hover:border-green-400 backdrop-blur-lg transition-all duration-300 shadow-md hover:shadow-yellow-300/30"
             >
               <FaPlay className="mr-3 text-sm text-green-300" />
-              View Success Stories
+              What we offer
             </a>
           </div>
         </div>

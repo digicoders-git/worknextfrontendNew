@@ -16,7 +16,9 @@ function Services() {
     {
       id: 1,
       title: "Digital Marketing",
-      icon: <TrendingUp size={90} strokeWidth={1.5} className="text-emerald-300" />,
+      icon: (
+        <TrendingUp size={90} strokeWidth={1.5} className="text-emerald-300" />
+      ),
       services: [
         "SEO optimization for ranking growth",
         "Social media brand building",
@@ -28,7 +30,9 @@ function Services() {
     {
       id: 2,
       title: "Graphic Designing",
-      icon: <Palette size={90} strokeWidth={1.5} className="text-emerald-300" />,
+      icon: (
+        <Palette size={90} strokeWidth={1.5} className="text-emerald-300" />
+      ),
       services: [
         "Premium logo & branding kit",
         "Elegant business cards",
@@ -64,13 +68,16 @@ function Services() {
         "Billing & management software",
         "Task automation systems",
         "Custom SaaS product development",
+        "Enterprise Resource Planning (ERP) System",
       ],
       color: "from-emerald-300 to-green-500",
     },
     {
       id: 5,
       title: "Business Consulting",
-      icon: <LineChart size={90} strokeWidth={1.5} className="text-emerald-300" />,
+      icon: (
+        <LineChart size={90} strokeWidth={1.5} className="text-emerald-300" />
+      ),
       services: [
         "Business setup & structure",
         "PRO & legal process support",
@@ -81,24 +88,21 @@ function Services() {
     },
   ];
 
-useEffect(() => {
-  setIsVisible(true);
+  useEffect(() => {
+    setIsVisible(true);
 
-  if (!isAutoPlay) return;
+    if (!isAutoPlay) return;
 
-  const interval = setInterval(() => {
-    setActiveService((prev) => (prev + 1) % services.length);
-  }, 5000);
+    const interval = setInterval(() => {
+      setActiveService((prev) => (prev + 1) % services.length);
+    }, 5000);
 
-  return () => clearInterval(interval);
-}, [isAutoPlay, services.length]);
-
-
+    return () => clearInterval(interval);
+  }, [isAutoPlay, services.length]);
 
   return (
     <section className="py-20  bg-linear-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white ">
       <div className="xl:max-w-6xl mx-auto px-4">
-
         {/* Heading */}
         <h2
           className="text-4xl md:text-6xl font-bold text-center mb-4 
@@ -141,7 +145,6 @@ useEffect(() => {
          backdrop-blur-xl shadow-[0_0_25px_rgba(0,255,150,0.15)] transition-all"
         >
           <div className="grid lg:grid-cols-2 gap-10 items-start">
-
             {/* LEFT */}
             <div
               className={`transition-all duration-500 ${
@@ -193,10 +196,8 @@ useEffect(() => {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
   );

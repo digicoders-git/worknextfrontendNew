@@ -29,15 +29,12 @@ export default function ProjectSection() {
       {/* Heading */}
       <div className="text-center mb-16">
         <h1 className="text-green-900 text-4xl md:text-5xl font-extrabold leading-tight">
-          <span className="block">
-            Our Creative Project 
-          </span>
-
+          <span className="block">Our Creative Project</span>
         </h1>
 
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto  text-xl font-semibold">
-          Explore our latest projects crafted with premium designs & modern
-          layouts.
+          Explore our latest work crafted with premium design, modern layouts,
+          and purpose-driven creativity.
         </p>
       </div>
 

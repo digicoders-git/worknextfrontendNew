@@ -186,7 +186,7 @@ const GraphicDesign = () => {
     <div className="min-h-screen bg-linear-to-br from-slate-50 to-orange-50/30 mt-[80px]">
       {/* Header Section */}
       <header className="relative  bg-linear-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-400/20 to-transparent"></div>
@@ -202,7 +202,7 @@ const GraphicDesign = () => {
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
               </div>
               <span className="text-green-300 font-semibold drop-shadow-sm">
-                Award-Winning Graphic Design Agency
+                Professional Graphic Design Agency in Qatar
               </span>
             </div>
           </div>
@@ -217,7 +217,7 @@ const GraphicDesign = () => {
             </span>
           </h1>
 
-          <p className="text-xl py-4 md:text-xl mb-8 max-w-3xl mx-auto font-light text-white leading-relaxed drop-shadow-sm">
+          <p className="text-xl py-4 md:text-2xl mb-8 max-w-3xl mx-auto font-light text-white leading-relaxed drop-shadow-sm">
             Transform your brand with stunning visual designs that tell your
             story, connect with your audience, and drive real business results.
           </p>
@@ -238,7 +238,7 @@ const GraphicDesign = () => {
               className="group inline-flex items-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border-2 border-white/30 hover:green-yellow-400 backdrop-blur-lg transition-all duration-300 shadow-md hover:shadow-yellow-300/30"
             >
               <FaPlay className="mr-3 text-sm text-green-500" />
-              View Portfolio
+              What we offer
             </a>
           </div>
 

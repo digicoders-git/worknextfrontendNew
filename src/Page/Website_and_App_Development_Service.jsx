@@ -254,14 +254,14 @@ const WebsiteAndAppDevelopment = () => {
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-ping"></div>
               </div>
               <span className="text-white font-semibold drop-shadow-sm">
-                Premium Web & App Development
+                Professional Web & App Development in Qatar
               </span>
             </div>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight drop-shadow-lg">
-            <span className="bg-gradient-to-r from-white via-green-100 to-white bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-green-300 via-white to-green-400 bg-clip-text text-transparent">
               Website & App Development
             </span>
             <span className="block text-4xl md:text-5xl lg:text-6xl font-semibold text-white mt-4">
@@ -280,7 +280,7 @@ const WebsiteAndAppDevelopment = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               to="/contact"
-              className="group relative inline-flex items-center bg-green-800 text-[#fff] hover:bg-green-900 font-semibold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              className="group relative inline-flex items-center bg-gradient-to-r from-green-400 to-green-400 hover:from-green-500 hover:to-green-500 text-[#3a2407] font-semibold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-yellow-400/40 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-gray-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative">Start Your Project Today</span>
@@ -292,7 +292,7 @@ const WebsiteAndAppDevelopment = () => {
               className="group inline-flex items-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border-2 border-white/30 hover:border-white backdrop-blur-lg transition-all duration-300 shadow-md hover:shadow-white/30"
             >
               <FaPlay className="mr-3 text-sm text-white" />
-              View Our Portfolio
+              What we offer
             </a>
           </div>
         </div>

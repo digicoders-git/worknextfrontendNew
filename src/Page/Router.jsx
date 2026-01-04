@@ -7,6 +7,7 @@ import AboutUs from "./About";
 import Contact from "./Contact";
 import CareersPage from "./Carres";
 import DemoPage from "./Getdemo";
+import AllServices from "./AllServices";
 
 // Services pages
 import DigitalMarketing from "./Digital_marketing";
@@ -24,6 +25,7 @@ function Router() {
         <Route path="/about" element={<AboutUs />} />
 
         {/* Services */}
+        <Route path="/services" element={<AllServices />} />
         <Route
           path="/services/Digital_Marketing"
           element={<DigitalMarketing />}

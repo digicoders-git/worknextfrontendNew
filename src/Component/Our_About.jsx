@@ -91,27 +91,24 @@ export default function AboutWorknest() {
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-linear-to-br from-[#10b981]/10 to-[#34d399]/10 rounded-full blur-3xl"></div>
 
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 relative z-10">
-              WorknestConnect is a Qatar-based business solutions company
-              offering HR services, documentation support, digital marketing,
-              branding, IT solutions, and e-commerce development — all on one
-              unified platform.
+              Worknest Connect is a Doha-based business solutions company in Qatar offering digital marketing, branding, IT solutions, business consulting, and e-commerce development — all through one unified platform.
             </p>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 relative z-10">
-              Founded in 2025 in Doha, our purpose is simple: to make business
-              operations easier, faster, and more affordable. We help SMEs
-              (Small and Medium Enterprises), startups, and corporate
-              organizations build efficient systems and grow through modern
-              technology.
+              Founded in 2025 in Doha, our purpose is simple: to make business operations easier, faster, and more affordable for companies across Qatar.
             </p>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 relative z-10">
-              By combining innovation, quality service, and a customer-first
-              approach, we deliver solutions that reduce workload, improve
-              productivity, and strengthen business performance.
+              We work closely with SMEs, startups, and corporate organizations to build strong digital systems, improve operational efficiency, and drive sustainable business growth using modern technology and result-driven strategies.
             </p>
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 relative z-10">
+              By combining innovation, quality execution, and a customer-first approach, we deliver solutions that:
+            </p>
+            <ul className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 relative z-10 ml-6">
+              <li className="mb-2">• Simplify complex business processes</li>
+              <li className="mb-2">• Improve productivity and digital performance</li>
+              <li className="mb-2">• Strengthen brand presence and long-term growth</li>
+            </ul>
             <p className="text-[#10b981] text-lg md:text-xl font-semibold relative z-10">
-              WorknestConnect is the trusted partner for companies in Qatar who
-              want to scale, transform digitally, and stay competitive in
-              today's fast-changing market.
+              At Worknest Connect, we don't just deliver services — we partner with businesses in Doha to help them scale with confidence.
             </p>
           </div>
         </div>

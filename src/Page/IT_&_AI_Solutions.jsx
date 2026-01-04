@@ -60,6 +60,31 @@ const ITAndAISolutions = () => {
   const services = [
     {
       id: 1,
+      icon: <FaServer className="text-3xl" />,
+      title: "Enterprise Resource Planning (ERP) System",
+      description:
+        "Manage your entire business from one powerful system. Our ERP solution integrates core operations—finance, HR, inventory, sales, and workflows—into a single, intelligent platform. Automate processes, gain real-time insights, and keep your organization fully aligned and efficient.",
+      p: "One system. Total control. Smarter operations.",
+      h: "What You'll Get:",
+      features: [
+        "✓ Finance & Accounting Management",
+        "✓ HR & Payroll Automation",
+        "✓ Inventory & Procurement Control",
+        "✓ Sales & CRM Integration",
+        "✓ Workflow & Task Automation",
+        "✓ Reports, Dashboards & Analytics",
+      ],
+      image: "/ERP Solutions.png",
+      gradient: "green",
+      results: [
+        "✓ Centralized Operations",
+        "✓ Faster Decision-Making",
+        "✓ Reduced Manual Work",
+        "✓ Improved Accuracy & Control",
+      ],
+    },
+    {
+      id: 2,
       icon: <FaCog className="text-3xl" />,
       title: "Billing & Invoice Software",
       description:
@@ -79,7 +104,7 @@ const ITAndAISolutions = () => {
       results: ["✓ 80% Time Saved", "✓ 99% Accuracy", "✓ Real-time Tracking"],
     },
     {
-      id: 2,
+      id: 3,
       icon: <FaServer className="text-3xl" />,
       title: "Task Management Systems",
       description:
@@ -103,7 +128,7 @@ const ITAndAISolutions = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       icon: <FaDatabase className="text-3xl" />,
       title: "Payroll Management",
       description:
@@ -127,7 +152,7 @@ const ITAndAISolutions = () => {
       ],
     },
     {
-      id: 4,
+      id: 5,
       icon: <FaMobile className="text-3xl" />,
       title: "POS Systems",
       description:
@@ -151,7 +176,7 @@ const ITAndAISolutions = () => {
       ],
     },
     {
-      id: 5,
+      id: 6,
       icon: <FaRobot className="text-3xl" />,
       title: "AI Solutions & Chatbots",
       description:
@@ -176,7 +201,7 @@ const ITAndAISolutions = () => {
       ],
     },
     {
-      id: 6,
+      id: 7,
       icon: <FaCloud className="text-3xl" />,
       title: "SaaS Products Development",
       description:
@@ -205,7 +230,7 @@ const ITAndAISolutions = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50/30 mt-[80px]">
       {/* Header Section */}
       <header className="relative  bg-gradient-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-400/20 to-transparent"></div>
@@ -222,7 +247,7 @@ const ITAndAISolutions = () => {
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
               </div>
               <span className="text-green-300 font-semibold drop-shadow-sm">
-                Cutting-Edge IT & AI Solutions
+                Smart IT & AI Solutions for Businesses in Doha
               </span>
             </div>
           </div>
@@ -264,7 +289,7 @@ const ITAndAISolutions = () => {
               className="group inline-flex items-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border-2 border-white/30 hover:border-green-400 backdrop-blur-lg transition-all duration-300 shadow-md hover:shadow-yellow-300/30"
             >
               <FaPlay className="mr-3 text-sm text-green-300" />
-              View Case Studies
+              What we offer
             </a>
           </div>
 
@@ -325,12 +350,30 @@ const ITAndAISolutions = () => {
                 key={service.id}
                 ref={(el) => (serviceCardsRef.current[index] = el)}
                 className={`
-            group bg-white rounded-3xl shadow-xl hover:shadow-2xl overflow-hidden 
+            group rounded-3xl shadow-xl hover:shadow-2xl overflow-hidden 
             opacity-0 translate-y-8 transition-all duration-700
-            flex flex-col lg:flex-row border border-gray-100
+            flex flex-col lg:flex-row border
             ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}
+            ${
+              service.id === 1
+                ? "bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-blue-300 shadow-blue-200/50 hover:shadow-blue-300/70 relative"
+                : "bg-white border-gray-100"
+            }
           `}
               >
+                {/* Special Badge for ERP System */}
+                {service.id === 1 && (
+                  <div className="absolute -top-3 -right-3 z-20">
+                    <div className="bg-gradient-to-r from-green-600 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                      
+                    </div>
+                  </div>
+                )}
+                
+                {/* Glowing border for ERP */}
+                {service.id === 1 && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-400/20 rounded-3xl blur-sm"></div>
+                )}
                 {/* Left: Image */}
                 <div className="lg:w-1/2 relative overflow-hidden">
                   <div className="relative h-80 lg:h-full">
@@ -415,12 +458,7 @@ const ITAndAISolutions = () => {
       <TransformBussnation />
 
       {/* Technology Stack Section */}
-<TechnologySection/>
-
-      {/* Testimonials Section */}
-
-      {/* Final CTA Section */}
-
+      <TechnologySection />
       <Footer />
     </div>
   );

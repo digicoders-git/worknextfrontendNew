@@ -92,16 +92,17 @@ function Home_heading() {
           "
         >
           <span className="bg-linear-to-r from-[#1FD198] via-white to-[#CFFFE9] bg-clip-text text-transparent">
-            All-In-One Creative, Tech & Business Services
+            All-in-One Digital Marketing, IT & Business Solutions Company
           </span>
           <br />
-          <span className="text-white opacity-90">for Modern Enterprises</span>
+          <span className="text-white opacity-90">in Doha, Qatar</span>
         </h1>
 
         {/* PARAGRAPH */}
-        <p className="max-w-3xl text-sm sm:text-base md:text-lg lg:text-2xl mt-4 opacity-90">
-          Stay ahead with solutions designed for tomorrow — intelligent tools
-          and strategies.
+        <p className="max-w-4xl text-sm sm:text-base md:text-lg lg:text-2xl mt-4 opacity-90">
+          Helping businesses in Doha grow faster with result-driven digital
+          marketing, modern IT solutions, smart business consulting, and
+          scalable e-commerce development — all under one trusted platform.
         </p>
 
         {/* CTA BUTTON */}

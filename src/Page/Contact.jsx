@@ -14,6 +14,7 @@ import {
   FaYoutube,
   FaTiktok,
   FaLinkedinIn,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -126,7 +127,7 @@ export default function ContactHeader() {
             </a>
 
             <Link
-              to="/services/Digital_Marketing"
+              to="/services"
               className="group inline-flex items-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border-2 border-white/30 hover:border-green-400 backdrop-blur-lg transition-all duration-300"
             >
               <FaPlay className="mr-3 text-sm text-green-300" />
@@ -238,24 +239,31 @@ export default function ContactHeader() {
             </div>
 
             {/* Stats Section */}
+            {/* Stats Section */}
             <div className="grid grid-cols-3 gap-6 pt-6">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-green-600">
                   50+
                 </div>
-                <div className="text-sm text-gray-600">Team Members</div>
+                <div className="text-sm text-gray-600">
+                  Skilled Professionals
+                </div>
               </div>
+
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-green-600">
                   200+
                 </div>
-                <div className="text-sm text-gray-600">Projects</div>
+                <div className="text-sm text-gray-600">Quality Execution</div>
               </div>
+
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-green-600">
                   15+
                 </div>
-                <div className="text-sm text-gray-600">Countries</div>
+                <div className="text-sm text-gray-600">
+                  Years of Long-Term Partnerships
+                </div>
               </div>
             </div>
           </div>
@@ -514,6 +522,15 @@ export default function ContactHeader() {
                 className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
               >
                 <FaLinkedinIn className="w-7 h-7" />
+              </a>
+
+              <a
+                href="https://wa.me/97431175515"
+                target="_blank"
+                rel="noreferrer"
+                className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
+              >
+                <FaWhatsapp className="w-7 h-7" />
               </a>
             </div>
           </div>

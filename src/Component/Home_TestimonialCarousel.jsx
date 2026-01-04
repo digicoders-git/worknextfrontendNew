@@ -31,12 +31,12 @@ export default function Testimonials() {
         "From digital marketing to developing our website and mobile app, Worknest Connect handled everything brilliantly. Their team is reliable, responsive, and genuinely committed to helping businesses grow. They have been a true partner in our journey.",
     },
     {
-      name: "Ms. Sara Al-Hammadi",
-      company: "Director – Al Hammadi Events & Hospitality, Dubai, UAE",
+      name: "K. C. Prashannah",
+      company: "Admin & Sales Representative",
       rating: 5,
-      img: "/Ms Sara Al-Hammadi (1).jpg",
+      img: "/WhatsApp Image 2025-12-11 at 20.34.49.jpeg",
       comment:
-        "Worknest Connect transformed our brand identity with fresh ideas and flawless execution. Their marketing strategies helped us reach the right audience quickly. It felt like working with a team that truly cared about our success.",
+        "“Working with Worknest Connect was a smooth and well-organized experience. The team delivered our website, company profile, and logo with strong attention to detail and clear understanding of our requirements. Their structured approach and timely execution helped us present our business more professionally and confidently. We truly appreciate their support and commitment to quality.”"
     },
     {
       name: "Mr. Khalid Farooq",

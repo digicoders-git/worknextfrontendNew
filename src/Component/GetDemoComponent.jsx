@@ -10,6 +10,7 @@ import {
   CalendarCheck,
   X,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -191,6 +192,10 @@ export default function ContactSection() {
                         link: "https://www.youtube.com/@worknestconnect",
                         icon: <Youtube size={20} />,
                       },
+                      {
+                        link: "https://wa.me/97431175515",
+                        icon: <FaWhatsapp size={20} />,
+                      },
                     ].map((s, i) => (
                       <motion.a
                         key={i}
@@ -224,22 +229,26 @@ export default function ContactSection() {
                   variants={itemVariant}
                   className="text-4xl font-extrabold text-gray-900 mb-10"
                 >
-                  Why Choose WorknestConnect?
+                  Why Book a Demo?
                 </motion.h3>
 
                 <div className="space-y-6 mb-12">
                   {[
                     {
-                      title: "End-to-End Solutions",
-                      desc: "From strategy to execution, we handle everything.",
+                      title: "No obligation, no pressure",
+                      desc: "Explore our solutions at your own pace without any commitments.",
                     },
                     {
-                      title: "Expert Team",
-                      desc: "50+ specialists across various domains.",
+                      title: "Personalized walkthrough",
+                      desc: "Tailored demonstration based on your specific business needs.",
                     },
                     {
-                      title: "Proven Results",
-                      desc: "98% client satisfaction rate.",
+                      title: "Clear explanation of features & benefits",
+                      desc: "Understand exactly how our solutions can transform your business.",
+                    },
+                    {
+                      title: "Practical insights for your business",
+                      desc: "Get actionable recommendations for your unique challenges.",
                     },
                   ].map((item, i) => (
                     <motion.div
@@ -261,7 +270,7 @@ export default function ContactSection() {
 
                       <div>
                         <h4 className="font-semibold text-gray-900">
-                          {item.title}
+                           {item.title}
                         </h4>
                         <p className="text-gray-600 text-sm">{item.desc}</p>
                       </div>

@@ -271,6 +271,17 @@ export default function Navbar() {
                       </NavLink>
                     </li>
                   ))}
+                  
+                  {/* All Services Button */}
+                  <li className="mt-3 pt-3 border-t border-gray-200">
+                    <NavLink
+                      to="/services"
+                      className="flex items-center justify-center bg-gradient-to-r from-[#013026] to-[#027A55] text-white font-bold px-4 py-3 rounded-xl hover:from-[#027A55] hover:to-[#013026] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                      onClick={() => setOpenService(false)}
+                    >
+                      All Services
+                    </NavLink>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -602,7 +613,7 @@ export default function Navbar() {
                     />
                   </summary>
 
-                  <div className="ml-6 mt-2 flex flex-col gap-1 border-l-2 border-gradient-to-b from-[#013026] to-[#027A55]">
+                  <div className="flex flex-col gap-1 border-l-2 border-gradient-to-b from-[#013026] to-[#027A55]">
                     {[
                       {
                         path: "/services/Digital_Marketing",
@@ -635,6 +646,17 @@ export default function Navbar() {
                         {service.name}
                       </NavLink>
                     ))}
+                    
+                    {/* All Services Button for Mobile */}
+                    <div className="mt-3 pt-3 border-t border-gray-200">
+                      <NavLink
+                        to="/services"
+                        onClick={() => setOpenDrawer(false)}
+                        className="flex items-center justify-center bg-gradient-to-r from-[#013026] to-[#027A55] text-white font-bold px-4 py-3 rounded-lg hover:from-[#027A55] hover:to-[#013026] transition-all duration-300 shadow-md hover:shadow-lg"
+                      >
+                        All Services
+                      </NavLink>
+                    </div>
                   </div>
                 </details>
               </div>

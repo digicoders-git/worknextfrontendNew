@@ -1,5 +1,5 @@
 // components/DigitalMarketing.jsx
-import React, { useEffect, useRef,  } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   FaSearch,
   FaHashtag,
@@ -26,7 +26,6 @@ import { Link } from "react-router-dom";
 
 const DigitalMarketing = () => {
   const serviceCardsRef = useRef([]);
-
 
   useEffect(() => {
     const observerOptions = {
@@ -70,8 +69,7 @@ const DigitalMarketing = () => {
         "Local SEO",
         "Performance Analytics",
       ],
-      image:
-        "/SEO Illustration.png",
+      image: "/SEO Illustration.png",
       gradient: "from-purple-500 to-blue-500",
       results: [
         "↑ 150% Organic Traffic",
@@ -117,8 +115,7 @@ const DigitalMarketing = () => {
         "Email Marketing",
         "Content Performance",
       ],
-      image:
-        "/Content Marketing Illustration.png",
+      image: "/Content Marketing Illustration.png",
       gradient: "from-green-500 to-teal-500",
       results: [
         "↑ 400% Content Engagement",
@@ -141,8 +138,7 @@ const DigitalMarketing = () => {
         "Conversion Tracking",
         "ROI Optimization",
       ],
-      image:
-        "/Google Ads Mastery Illustration.png",
+      image: "/Google Ads Mastery Illustration.png",
       gradient: "from-blue-500 to-cyan-500",
       results: [
         "↓ 40% Cost Per Click",
@@ -156,7 +152,7 @@ const DigitalMarketing = () => {
       title: "Meta Advertising",
       description:
         "Reach the right audience across Facebook and Instagram with smart, targeted Meta Ads. We create engaging creatives, optimize your campaigns, and use data-driven strategies to increase conversions, boost reach, and grow your business effectively.",
-       p:"Engage smarter. Convert faster.",
+      p: "Engage smarter. Convert faster.",
       features: [
         "Facebook Ads Strategy",
         "Instagram Campaigns",
@@ -188,8 +184,7 @@ const DigitalMarketing = () => {
         "Live Streaming",
         "Video Analytics",
       ],
-      image:
-        "/Video Marketing Illustration.png",
+      image: "/Video Marketing Illustration.png",
       gradient: "from-red-500 to-orange-500",
       results: [
         "↑ 600% Video Views",
@@ -199,12 +194,11 @@ const DigitalMarketing = () => {
     },
   ];
 
-
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 to-blue-50/30 mt-20">
       {/* Header Section */}
       <header className="relative  bg-linear-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center"></div>
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-400/20 to-transparent"></div>
@@ -220,7 +214,7 @@ const DigitalMarketing = () => {
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
               </div>
               <span className="text-green-300 font-semibold drop-shadow-sm">
-                Award-Winning Digital Marketing Agency
+                Trusted Digital Marketing Partner in Doha
               </span>
             </div>
           </div>
@@ -257,7 +251,7 @@ const DigitalMarketing = () => {
               className="group inline-flex items-center bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-2xl border-2 border-white/30 hover:border-green-400 backdrop-blur-lg transition-all duration-300 shadow-md hover:shadow-yellow-300/30"
             >
               <FaPlay className="mr-3 text-sm text-green-300" />
-              Watch Our Story
+              What we offer
             </a>
           </div>
 
@@ -332,10 +326,7 @@ const DigitalMarketing = () => {
                       className={`absolute inset-0 bg-linear-to-r ${service.grant} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                     ></div>
 
-
-
                     {/* Results Badge */}
-   
                   </div>
                 </div>
 
