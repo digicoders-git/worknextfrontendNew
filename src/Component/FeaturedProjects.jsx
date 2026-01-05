@@ -406,7 +406,7 @@ const FeaturedProjects = () => {
                 </div>
 
                 {/* Footer Actions */}
-                <div className="p-3 xs:p-4 sm:p-6 border-t border-gray-100 bg-gray-50 flex-shrink-0">
+                <div className="p-3 xs:p-4 sm:p-6 border-t border-gray-100 bg-gray-50 flex-shrink-0 mb-2.5 xs:mb-0">
                   <div className="flex flex-col sm:flex-row gap-2 xs:gap-3">
                     {selectedProject.id === 10 && selectedProject.pdfUrl ? (
                       <a
