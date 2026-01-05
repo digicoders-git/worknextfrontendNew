@@ -70,7 +70,7 @@ const FeaturedProjects = () => {
     },
     {
       id: 9,
-      title: "ATC Company Profile Website",
+      title: "ATC Company Profile",
       category: "web",
       description:
         "A professionally structured company profile designed to clearly present ATC's services, strengths, and brand identity. Clean corporate layout with consistent branding.",
@@ -110,8 +110,8 @@ const FeaturedProjects = () => {
       category: "design",
       description:
         "Complete corporate calendar set including wall and table calendars, created to ensure year-round brand visibility with clean and professional design.",
-      image: "/ATC Calendar.png",
-      images: ["/image copy 2.png"],
+      image: "/Main.jpg",
+      images: ["/Main.jpg"],
       technologies: [
         "Adobe InDesign",
         "Photoshop",
@@ -123,6 +123,7 @@ const FeaturedProjects = () => {
       year: "2025",
       status: "Completed",
       projectUrl: "https://simplebooklet.com/alsuwaidi",
+      pdfUrl: "/ATC Wall Calendar Design Final.pdf",
       featured: false,
       results: "Year-round brand visibility, professional finish",
       likes: 89,
@@ -255,142 +256,184 @@ const FeaturedProjects = () => {
 
       {/* Project Details Modal - Fully Responsive */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-2 sm:p-4 backdrop-blur-md">
-          <div className="bg-white rounded-lg sm:rounded-2xl lg:rounded-3xl w-full h-full sm:w-[95vw] sm:h-[95vh] md:w-[90vw] md:h-[90vh] lg:max-w-7xl lg:max-h-[85vh] overflow-hidden shadow-2xl border border-gray-100">
-            <div className="relative h-full flex flex-col">
-              <button
-                onClick={closeProjectModal}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 lg:top-6 lg:right-6 z-20 bg-white/90 backdrop-blur-sm rounded-full p-2 sm:p-2.5 lg:p-3 shadow-xl hover:bg-white hover:scale-110 transition-all duration-300 border border-gray-200"
-              >
-                <X className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-700" />
-              </button>
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-1 xs:p-2 sm:p-4">
+          <div className="bg-white rounded-xl xs:rounded-2xl w-full h-full xs:h-[95vh] xs:max-w-md sm:max-w-3xl lg:max-w-5xl xs:max-h-[95vh] sm:max-h-[90vh] lg:max-h-[85vh] overflow-hidden shadow-2xl border border-gray-200 relative">
+            {/* Close Button */}
+            <button
+              onClick={closeProjectModal}
+              className="absolute top-2 right-2 xs:top-3 xs:right-3 sm:top-4 sm:right-4 z-30 bg-gray-100 hover:bg-gray-200 rounded-full p-1.5 xs:p-2 transition-all duration-200 shadow-md"
+            >
+              <X className="w-4 h-4 xs:w-5 xs:h-5 text-gray-600" />
+            </button>
 
-              <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 h-full">
-                {/* Left Side - Image */}
-                <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center h-[35vh] sm:h-[40vh] md:h-[45vh] lg:h-full">
-                  <img
-                    src={
-                      selectedProject.images
-                        ? selectedProject.images[currentImageIndex]
-                        : selectedProject.image
-                    }
-                    alt={selectedProject.title}
-                    className="max-w-[85%] max-h-[85%] object-contain"
-                    onError={(e) => {
-                      e.target.src =
-                        "https://via.placeholder.com/800x600/10b981/ffffff?text=Image+Not+Found";
-                    }}
-                  />
+            <div className="flex flex-col lg:flex-row h-full">
+              {/* Left Side - Image Gallery */}
+              <div className="lg:w-1/2 bg-gradient-to-br from-gray-50 to-gray-100 relative flex items-center justify-center h-[35vh] xs:h-[40vh] sm:h-[45vh] lg:min-h-[500px]">
+                <img
+                  src={
+                    selectedProject.images
+                      ? selectedProject.images[currentImageIndex]
+                      : selectedProject.image
+                  }
+                  alt={selectedProject.title}
+                  className="max-w-[90%] max-h-[90%] xs:max-w-full xs:max-h-full object-contain p-2 xs:p-4"
+                  onError={(e) => {
+                    e.target.src =
+                      "https://via.placeholder.com/600x400/10b981/ffffff?text=Project+Image";
+                  }}
+                />
 
-                  {selectedProject.images &&
-                    selectedProject.images.length > 1 && (
-                      <>
-                        <button
-                          onClick={prevImage}
-                          className="absolute left-2 sm:left-3 md:left-4 lg:left-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-2 sm:p-2.5 md:p-3 lg:p-4 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:scale-110"
-                        >
-                          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                        </button>
-                        <button
-                          onClick={nextImage}
-                          className="absolute right-2 sm:right-3 md:right-4 lg:right-6 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-2 sm:p-2.5 md:p-3 lg:p-4 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:scale-110"
-                        >
-                          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                        </button>
-                        <div className="absolute bottom-3 sm:bottom-4 md:bottom-5 lg:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                          {selectedProject.images.map((_, index) => (
-                            <button
-                              key={index}
-                              onClick={() => setCurrentImageIndex(index)}
-                              className={`w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 rounded-full transition-all shadow-md hover:scale-110 ${
-                                index === currentImageIndex
-                                  ? "bg-green-500 scale-125 shadow-green-500/50"
-                                  : "bg-white bg-opacity-70 hover:bg-opacity-100"
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      </>
-                    )}
+                {/* Image Navigation */}
+                {selectedProject.images &&
+                  selectedProject.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-2 xs:left-3 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-1.5 xs:p-2 shadow-lg transition-all"
+                      >
+                        <ChevronLeft className="w-4 h-4 xs:w-5 xs:h-5 text-gray-700" />
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-2 xs:right-3 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-1.5 xs:p-2 shadow-lg transition-all"
+                      >
+                        <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 text-gray-700" />
+                      </button>
+
+                      {/* Image Indicators */}
+                      <div className="absolute bottom-2 xs:bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1 xs:space-x-2">
+                        {selectedProject.images.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full transition-all ${
+                              index === currentImageIndex
+                                ? "bg-green-500 scale-125"
+                                : "bg-white/70 hover:bg-white"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+              </div>
+
+              {/* Right Side - Content */}
+              <div className="lg:w-1/2 flex flex-col h-[65vh] xs:h-[58vh] sm:h-auto lg:h-full">
+                {/* Header */}
+                <div className="p-3 xs:p-4 sm:p-6 border-b border-gray-100 flex-shrink-0">
+                  <h2 className="text-lg xs:text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 xs:mb-3 leading-tight">
+                    {selectedProject.title}
+                  </h2>
+                  <div className="flex flex-wrap items-center gap-2 xs:gap-3 sm:gap-4 text-xs xs:text-sm text-gray-600">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3 xs:w-4 xs:h-4" />
+                      {selectedProject.year}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Users className="w-3 h-3 xs:w-4 xs:h-4" />
+                      {selectedProject.client}
+                    </span>
+                    <span
+                      className={`px-2 xs:px-3 py-0.5 xs:py-1 rounded-full text-xs font-medium ${
+                        selectedProject.status === "Completed"
+                          ? "bg-green-100 text-green-800"
+                          : "bg-yellow-100 text-yellow-800"
+                      }`}
+                    >
+                      {selectedProject.status}
+                    </span>
+                  </div>
                 </div>
 
-                {/* Right Side - Content */}
-                <div className="flex flex-col h-[65vh] lg:h-full overflow-hidden">
-                  <div className="p-3 sm:p-4 md:p-5 lg:p-8 flex-1 overflow-y-auto">
-                    <div className="mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                      <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 leading-tight">
-                        {selectedProject.title}
-                      </h2>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-600">
-                        <span className="flex items-center bg-gray-100 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
-                          <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-600" />
-                          <span className="font-medium">{selectedProject.year}</span>
+                {/* Scrollable Content */}
+                <div className="flex-1 overflow-y-auto p-3 xs:p-4 sm:p-6 space-y-3 xs:space-y-4 sm:space-y-6">
+                  {/* Description */}
+                  <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg xs:rounded-xl p-3 xs:p-4">
+                    <p className="text-gray-700 leading-relaxed text-xs xs:text-sm sm:text-base">
+                      {selectedProject.fullDescription}
+                    </p>
+                  </div>
+
+                  {/* Key Highlights */}
+                  <div>
+                    <h3 className="text-sm xs:text-base sm:text-lg font-semibold text-gray-900 mb-2 xs:mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 xs:w-5 xs:h-5 text-green-500" />
+                      Key Highlights
+                    </h3>
+                    <ul className="space-y-1.5 xs:space-y-2">
+                      {selectedProject.highlights.map((highlight, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start gap-2 xs:gap-3 text-gray-600 text-xs xs:text-sm"
+                        >
+                          <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 bg-green-500 rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Technologies */}
+                  <div>
+                    <h3 className="text-sm xs:text-base sm:text-lg font-semibold text-gray-900 mb-2 xs:mb-3 flex items-center gap-2">
+                      <Settings className="w-4 h-4 xs:w-5 xs:h-5 text-green-500" />
+                      Technologies Used
+                    </h3>
+                    <div className="flex flex-wrap gap-1.5 xs:gap-2">
+                      {selectedProject.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="bg-white border border-green-200 text-green-700 px-2 xs:px-3 py-1 rounded-md xs:rounded-lg text-xs font-medium shadow-sm"
+                        >
+                          {tech}
                         </span>
-                        <span className="flex items-center bg-gray-100 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
-                          <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-600" />
-                          <span className="font-medium">{selectedProject.client}</span>
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 mb-3 sm:mb-4 md:mb-5 lg:mb-6 border border-green-100 shadow-sm">
-                      <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed font-medium">
-                        {selectedProject.fullDescription}
-                      </p>
-                    </div>
-
-                    <div className="mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                      <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 flex items-center">
-                        <div className="w-1 sm:w-1.5 md:w-2 h-5 sm:h-6 md:h-7 lg:h-8 bg-gradient-to-b from-green-500 to-emerald-500 rounded-full mr-2 sm:mr-3"></div>
-                        Key Highlights
-                      </h3>
-                      <ul className="space-y-2 sm:space-y-3">
-                        {selectedProject.highlights.map((highlight, index) => (
-                          <li
-                            key={index}
-                            className="flex items-start text-gray-700 text-xs sm:text-sm"
-                          >
-                            <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-2 sm:mt-2.5 mr-3 sm:mr-4 flex-shrink-0 shadow-lg"></div>
-                            <span className="font-medium leading-relaxed">{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                      <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 flex items-center">
-                        <Settings className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-500 mr-2 sm:mr-3" />
-                        Technologies Used
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedProject.technologies.map((tech, index) => (
-                          <span
-                            key={index}
-                            className="bg-white border border-green-200 text-green-700 px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 rounded-lg text-xs font-semibold shadow-sm hover:shadow-md transition-all hover:scale-105"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center sm:justify-end gap-2 sm:gap-3 p-3 sm:p-4 md:p-5 lg:p-6 border-t border-gray-200 bg-gradient-to-r from-gray-50 to-gray-100 flex-shrink-0">
-                    {selectedProject.projectUrl ? (
+                  {/* Results */}
+                  {selectedProject.results && (
+                    <div className="bg-gray-50 rounded-lg xs:rounded-xl p-3 xs:p-4">
+                      <h3 className="text-sm xs:text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                        Results Achieved
+                      </h3>
+                      <p className="text-gray-700 text-xs xs:text-sm">
+                        {selectedProject.results}
+                      </p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Footer Actions */}
+                <div className="p-3 xs:p-4 sm:p-6 border-t border-gray-100 bg-gray-50 flex-shrink-0">
+                  <div className="flex flex-col sm:flex-row gap-2 xs:gap-3">
+                    {selectedProject.id === 10 && selectedProject.pdfUrl ? (
+                      <a
+                        href={selectedProject.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 xs:px-6 py-2.5 xs:py-3 rounded-lg xs:rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg text-sm xs:text-base"
+                      >
+                        <Eye className="w-4 h-4" />
+                        View PDF
+                      </a>
+                    ) : selectedProject.projectUrl ? (
                       <a
                         href={selectedProject.projectUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto bg-gradient-to-r from-green-600 via-green-500 to-emerald-600 text-white px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 flex items-center justify-center group"
+                        className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 xs:px-6 py-2.5 xs:py-3 rounded-lg xs:rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg text-sm xs:text-base"
                       >
-                        <Globe className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                        <span className="truncate">{selectedProject.id === 0 ? "View Live Project" : "View More Details"}</span>
+                        <Globe className="w-4 h-4" />
+                        {selectedProject.id === 0
+                          ? "View Live Project"
+                          : "View More Details"}
                       </a>
                     ) : null}
-
                     <button
                       onClick={closeProjectModal}
-                      className="w-full sm:w-auto bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 border-2 border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl hover:scale-105"
+                      className="px-4 xs:px-6 py-2.5 xs:py-3 bg-gray-200 text-gray-700 rounded-lg xs:rounded-xl font-semibold hover:bg-gray-300 transition-all text-sm xs:text-base"
                     >
                       Close
                     </button>
