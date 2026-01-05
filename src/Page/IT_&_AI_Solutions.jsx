@@ -365,7 +365,7 @@ const ITAndAISolutions = () => {
                 {/* Special Badge for ERP System */}
                 {service.id === 1 && (
                   <div className="absolute -top-3 -right-3 z-20">
-                    <div className="bg-gradient-to-r from-green-600 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                    <div className="bg-gradient-to-r from-green-800 to-green-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
                       
                     </div>
                   </div>
@@ -373,7 +373,7 @@ const ITAndAISolutions = () => {
                 
                 {/* Glowing border for ERP */}
                 {service.id === 1 && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-green-400/20 rounded-3xl blur-sm"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-green-600/20 rounded-3xl blur-sm"></div>
                 )}
                 {/* Left: Image */}
                 <div className="lg:w-1/2 relative overflow-hidden">

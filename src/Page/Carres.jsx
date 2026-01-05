@@ -54,14 +54,7 @@ const CareersPage = () => {
       roles: "Digital Marketing Specialists, Social Media Managers, PPC Experts, Content Creators, SEO Analysts.",
       gradient: "from-orange-400 to-orange-600"
     },
-    {
-      icon: <Database className="text-white" size={32} />,
-      title: "Enterprise Resource Planning (ERP) System",
-      description: "Manage your entire business from one powerful system. Our ERP solution integrates core operations—finance, HR, inventory, sales, and workflows—into a single, intelligent platform. Automate processes, gain real-time insights, and keep your organization fully aligned and efficient.",
-      tagline: "One system. Total control. Smarter operations.",
-      gradient: "from-indigo-500 to-blue-600",
-      isERP: true
-    }
+
   ];
 
   return (

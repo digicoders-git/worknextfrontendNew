@@ -95,16 +95,16 @@ export default function ContactSection() {
   return (
     <>
       {/* MAIN SECTION */}
-      <section className="py-24 bg-gradient-to-b from-white to-emerald-50">
-        <div className="container mx-auto px-4">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-b from-white to-emerald-50">
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="bg-white/80 backdrop-blur-2xl shadow-2xl rounded-3xl p-12 max-w-6xl mx-auto border border-gray-100"
+            className="bg-white/80 backdrop-blur-2xl shadow-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 border border-gray-100"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-14">
               {/* LEFT SIDE */}
               <motion.div
                 variants={staggerContainer}
@@ -114,26 +114,26 @@ export default function ContactSection() {
               >
                 <motion.h3
                   variants={itemVariant}
-                  className="text-4xl font-extrabold text-gray-900 mb-10"
+                  className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 sm:mb-8 md:mb-10"
                 >
                   Get In Touch
                 </motion.h3>
 
                 {/* CONTACT LIST */}
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {[
                     {
-                      icon: <Globe size={24} />,
+                      icon: <Globe size={20} />,
                       title: "Website",
                       value: "www.worknestconnect.com",
                     },
                     {
-                      icon: <Mail size={24} />,
+                      icon: <Mail size={20} />,
                       title: "Email",
                       value: "info@worknestconnect.com",
                     },
                     {
-                      icon: <Phone size={24} />,
+                      icon: <Phone size={20} />,
                       title: "Phone",
                       value: "+974 3117 5515",
                     },
@@ -142,25 +142,25 @@ export default function ContactSection() {
                       variants={itemVariant}
                       key={i}
                       whileHover={{
-                        scale: 1.05,
+                        scale: 1.02,
                         boxShadow: "0 8px 25px rgba(16, 185, 129, 0.25)",
                       }}
-                      className="flex items-center text-gray-700 p-5 rounded-xl bg-white shadow-sm border hover:border-emerald-400 hover:bg-emerald-50 transition-all duration-300"
+                      className="flex items-center text-gray-700 p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl bg-white shadow-sm border hover:border-emerald-400 hover:bg-emerald-50 transition-all duration-300"
                     >
                       {/* Icon Animation */}
                       <motion.div
                         animate={{ scale: [1, 1.15, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="bg-emerald-600 text-white p-3 rounded-xl mr-4 shadow-md"
+                        className="bg-emerald-600 text-white p-2 sm:p-3 rounded-lg sm:rounded-xl mr-3 sm:mr-4 shadow-md flex-shrink-0"
                       >
                         {item.icon}
                       </motion.div>
 
-                      <div>
-                        <div className="font-semibold text-gray-900">
+                      <div className="min-w-0 flex-1">
+                        <div className="font-semibold text-gray-900 text-sm sm:text-base">
                           {item.title}
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-xs sm:text-sm text-gray-600 break-words">
                           {item.value}
                         </div>
                       </div>
@@ -169,32 +169,32 @@ export default function ContactSection() {
                 </div>
 
                 {/* SOCIAL ICONS */}
-                <motion.div variants={itemVariant} className="mt-12">
-                  <h4 className="font-semibold text-gray-800 text-lg mb-4">
+                <motion.div variants={itemVariant} className="mt-8 sm:mt-10 md:mt-12">
+                  <h4 className="font-semibold text-gray-800 text-base sm:text-lg mb-3 sm:mb-4">
                     Follow Us
                   </h4>
 
-                  <div className="flex space-x-4">
+                  <div className="flex flex-wrap gap-3 sm:gap-4">
                     {[
                       {
                         link: "https://www.instagram.com/worknestconnect",
-                        icon: <Instagram size={20} />,
+                        icon: <Instagram size={18} />,
                       },
                       {
                         link: "https://www.facebook.com/share/1FYPKKECea/",
-                        icon: <Facebook size={20} />,
+                        icon: <Facebook size={18} />,
                       },
                       {
                         link: "https://www.x.com/Worknestconnect",
-                        icon: <Twitter size={20} />,
+                        icon: <Twitter size={18} />,
                       },
                       {
                         link: "https://www.youtube.com/@worknestconnect",
-                        icon: <Youtube size={20} />,
+                        icon: <Youtube size={18} />,
                       },
                       {
                         link: "https://wa.me/97431175515",
-                        icon: <FaWhatsapp size={20} />,
+                        icon: <FaWhatsapp size={18} />,
                       },
                     ].map((s, i) => (
                       <motion.a
@@ -209,7 +209,7 @@ export default function ContactSection() {
                         }}
                         href={s.link}
                         target="_blank"
-                        className="bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-all"
+                        className="bg-emerald-600 text-white p-2.5 sm:p-3 rounded-full shadow-lg hover:bg-emerald-700 transition-all"
                       >
                         {s.icon}
                       </motion.a>
@@ -227,12 +227,12 @@ export default function ContactSection() {
               >
                 <motion.h3
                   variants={itemVariant}
-                  className="text-4xl font-extrabold text-gray-900 mb-10"
+                  className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 sm:mb-8 md:mb-10"
                 >
                   Why Book a Demo?
                 </motion.h3>
 
-                <div className="space-y-6 mb-12">
+                <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
                   {[
                     {
                       title: "No obligation, no pressure",
@@ -255,24 +255,24 @@ export default function ContactSection() {
                       key={i}
                       variants={itemVariant}
                       whileHover={{
-                        scale: 1.05,
+                        scale: 1.02,
                         boxShadow: "0 10px 25px rgba(16,185,129,0.25)",
                       }}
-                      className="flex items-start bg-white border p-5 rounded-xl shadow-sm hover:border-emerald-400 transition-all duration-300"
+                      className="flex items-start bg-white border p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl shadow-sm hover:border-emerald-400 transition-all duration-300"
                     >
                       <motion.div
                         animate={{ rotate: [0, 10, -10, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="bg-emerald-600 text-white p-2 rounded-lg mt-1 mr-4 shadow-md"
+                        className="bg-emerald-600 text-white p-1.5 sm:p-2 rounded-lg mt-1 mr-3 sm:mr-4 shadow-md flex-shrink-0"
                       >
-                        <Check size={18} />
+                        <Check size={16} />
                       </motion.div>
 
-                      <div>
-                        <h4 className="font-semibold text-gray-900">
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">
                            {item.title}
                         </h4>
-                        <p className="text-gray-600 text-sm">{item.desc}</p>
+                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -282,14 +282,14 @@ export default function ContactSection() {
                 <motion.button
                   variants={itemVariant}
                   whileHover={{
-                    scale: 1.08,
+                    scale: 1.05,
                     boxShadow: "0 10px 30px rgba(16,185,129,0.35)",
                   }}
-                  whileTap={{ scale: 0.92 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full bg-emerald-600 text-white py-4 rounded-2xl font-semibold text-lg shadow-xl hover:bg-emerald-700 transition-all flex items-center justify-center space-x-2"
+                  className="w-full bg-emerald-600 text-white py-3 sm:py-4 rounded-xl sm:rounded-2xl font-semibold text-base sm:text-lg shadow-xl hover:bg-emerald-700 transition-all flex items-center justify-center space-x-2"
                 >
-                  <CalendarCheck size={22} />
+                  <CalendarCheck size={20} />
                   <span>Schedule Consultation</span>
                 </motion.button>
               </motion.div>
@@ -300,28 +300,28 @@ export default function ContactSection() {
 
       {/* MODAL */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50 backdrop-blur-sm">
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center p-2 sm:p-4 z-50 backdrop-blur-sm">
           <motion.div
             initial={{ scale: 0.7, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="bg-black/80 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] mt-[100px] overflow-y-auto animate-fade-in"
+            className="bg-black/80 rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-xs sm:max-w-lg md:max-w-2xl max-h-[90vh] overflow-y-auto animate-fade-in"
           >
-            <div className="bg-linear-to-r from-emerald-500 to-emerald-700 text-white p-6 rounded-t-2xl flex justify-between items-center">
-              <h2 className="text-2xl font-bold">Request a Demo</h2>
+            <div className="bg-gradient-to-r from-emerald-500 to-emerald-700 text-white p-4 sm:p-6 rounded-t-xl sm:rounded-t-2xl flex justify-between items-center">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold">Request a Demo</h2>
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="text-white hover:text-emerald-200 transition duration-300 p-1 rounded-full hover:bg-white/10"
               >
-                <X className="text-xl" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
 
-            <div className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-6 text-white">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 sm:p-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 text-white">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
-                    <label className="block text-white font-medium mb-2">
+                    <label className="block text-white font-medium mb-2 text-sm sm:text-base">
                       Name
                     </label>
                     <input
@@ -329,12 +329,12 @@ export default function ContactSection() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-black text-sm sm:text-base focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-white font-medium mb-2">
+                    <label className="block text-white font-medium mb-2 text-sm sm:text-base">
                       Email
                     </label>
                     <input
@@ -342,15 +342,15 @@ export default function ContactSection() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black focus:ring-2 focus:ring-emerald-500"
+                      className="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-black text-sm sm:text-base focus:ring-2 focus:ring-emerald-500"
                       required
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
-                    <label className="block text-white font-medium mb-2">
+                    <label className="block text-white font-medium mb-2 text-sm sm:text-base">
                       Mobile
                     </label>
                     <input
@@ -358,13 +358,13 @@ export default function ContactSection() {
                       name="mobile"
                       value={formData.mobile}
                       onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black focus:ring-2 focus:ring-emerald-500"
+                      className="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-black text-sm sm:text-base focus:ring-2 focus:ring-emerald-500"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-white font-medium mb-2">
+                    <label className="block text-white font-medium mb-2 text-sm sm:text-base">
                       Message
                     </label>
                     <input
@@ -372,7 +372,7 @@ export default function ContactSection() {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black focus:ring-2 focus:ring-emerald-500"
+                      className="w-full border border-gray-300 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-black text-sm sm:text-base focus:ring-2 focus:ring-emerald-500"
                       required
                     />
                   </div>
@@ -380,7 +380,7 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
-                  className="w-full bg-emerald-600 py-4 rounded-xl font-semibold text-lg hover:bg-emerald-700 shadow-lg"
+                  className="w-full bg-emerald-600 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg hover:bg-emerald-700 shadow-lg transition-all"
                 >
                   Submit Request
                 </button>

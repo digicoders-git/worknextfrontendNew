@@ -84,8 +84,8 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div className="w-full mx-auto py-14 px-4">
-      <h2 className="text-center text-4xl font-bold mb-10">
+    <div className="w-full mx-auto py-14 px-4 pt-18">
+      <h2 className="text-center text-3xl font-bold mb-10">
         WorknestConnect Testimonials
       </h2>
 

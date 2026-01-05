@@ -183,7 +183,7 @@ export default function AboutWorknest() {
         {/* Why Choose Us */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4 bg-linear-to-r from-[#10b981] to-[#059669] bg-clip-text text-transparent">
+            <h3 className="text-3xl font-bold mb-4 bg-linear-to-r from-[#10b981] to-[#059669] bg-clip-text text-transparent">
               WHY CHOOSE WORKNESTCONNECT?
             </h3>
             <p className="text-2xl text-gray-700 font-semibold">

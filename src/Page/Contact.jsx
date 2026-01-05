@@ -163,30 +163,30 @@ export default function ContactHeader() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-100 rounded-full blur-3xl opacity-40 animate-pulse delay-500"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 py-20">
+        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-center relative z-10 py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
           {/* Left Content Section */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Header */}
-            <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-linear-to-r from-green-50 to-blue-50 rounded-full border border-green-200 shadow-sm">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-green-50 to-blue-50 rounded-full border border-green-200 shadow-sm">
                 <span className="relative flex h-2 w-2 mr-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span className="text-green-700 font-semibold text-sm">
-                  We're Contact!
+                <span className="text-green-700 font-semibold text-xs sm:text-sm">
+                  Our Contact!
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-900">
                 Connect With{" "}
-                <span className="bg-linear-to-r from-green-900 to-green-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-green-900 to-green-500 bg-clip-text text-transparent">
                   Our
                 </span>{" "}
                 Team Today
               </h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                 Join WorknestConnect and be part of an innovative team that's
                 shaping the future of digital solutions. We're looking for
                 passionate individuals ready to make an impact.
@@ -194,44 +194,44 @@ export default function ContactHeader() {
             </div>
 
             {/* Features List */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-green-200 transition-all duration-300 group hover:-translate-y-1">
-                <div className="w-14 h-14 bg-linear-to-br from-green-500 to-green-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white text-xl">🚀</span>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center space-x-3 sm:space-x-4 p-4 sm:p-5 md:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-green-200 transition-all duration-300 group hover:-translate-y-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <span className="text-white text-lg sm:text-xl">🚀</span>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-gray-900">
+                <div className="min-w-0">
+                  <h3 className="font-bold text-sm sm:text-base md:text-lg text-gray-900">
                     Fast Growing Company
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600">
                     Join a rapidly expanding team with global reach
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 group hover:-translate-y-1">
-                <div className="w-14 h-14 bg-linear-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white text-xl">💼</span>
+              <div className="flex items-center space-x-3 sm:space-x-4 p-4 sm:p-5 md:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-purple-200 transition-all duration-300 group hover:-translate-y-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <span className="text-white text-lg sm:text-xl">💼</span>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-gray-900">
+                <div className="min-w-0">
+                  <h3 className="font-bold text-sm sm:text-base md:text-lg text-gray-900">
                     Career Growth
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600">
                     Clear progression paths and skill development
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 group hover:-translate-y-1">
-                <div className="w-14 h-14 bg-linear-to-br from-green-500 to-green-400 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white text-xl">🌍</span>
+              <div className="flex items-center space-x-3 sm:space-x-4 p-4 sm:p-5 md:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 group hover:-translate-y-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-500 to-green-400 rounded-lg sm:rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <span className="text-white text-lg sm:text-xl">🌍</span>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg text-gray-900">
+                <div className="min-w-0">
+                  <h3 className="font-bold text-sm sm:text-base md:text-lg text-gray-900">
                     Global Opportunities
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600">
                     Work with clients and teams from around the world
                   </p>
                 </div>
@@ -239,75 +239,74 @@ export default function ContactHeader() {
             </div>
 
             {/* Stats Section */}
-            {/* Stats Section */}
-            <div className="grid grid-cols-3 gap-6 pt-6">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6">
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-green-600">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-600">
                   50+
                 </div>
-                <div className="text-sm text-gray-600">
+                <div className="text-xs sm:text-sm text-gray-600">
                   Skilled Professionals
                 </div>
               </div>
 
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-green-600">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-600">
                   40+
                 </div>
-                <div className="text-sm text-gray-600">Quality Execution</div>
+                <div className="text-xs sm:text-sm text-gray-600">Quality Execution</div>
               </div>
 
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-green-600">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-600">
                   99%
                 </div>
-                <div className="text-sm text-gray-600">Client Satisfaction</div>
+                <div className="text-xs sm:text-sm text-gray-600">Client Satisfaction</div>
               </div>
             </div>
           </div>
 
           {/* Form Section */}
-          <div className="relative w-full max-w-4xl mx-auto px-4">
+          <div className="relative w-full">
             {/* Floating Blobs */}
-            <div className="absolute -top-10 -right-10 w-24 h-24 bg-green-300 rounded-full opacity-50 animate-float blur-xl"></div>
+            <div className="absolute -top-6 sm:-top-10 -right-6 sm:-right-10 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-green-300 rounded-full opacity-50 animate-float blur-xl"></div>
             <div
-              className="absolute -bottom-10 -left-10 w-20 h-20 bg-blue-300 rounded-full opacity-50 animate-float blur-lg"
+              className="absolute -bottom-6 sm:-bottom-10 -left-6 sm:-left-10 w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 bg-blue-300 rounded-full opacity-50 animate-float blur-lg"
               style={{ animationDelay: "2s" }}
             ></div>
             <div
-              className="absolute top-1/2 -right-12 w-16 h-16 bg-purple-300 rounded-full opacity-50 animate-float blur-md"
+              className="absolute top-1/2 -right-8 sm:-right-12 w-10 sm:w-12 md:w-16 h-10 sm:h-12 md:h-16 bg-purple-300 rounded-full opacity-50 animate-float blur-md"
               style={{ animationDelay: "3s" }}
             ></div>
 
             {/* Form Card */}
-            <div className="relative bg-white/80 backdrop-blur-xl border border-gray-200 shadow-xl rounded-3xl p-8 md:p-12 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-green-200">
+            <div className="relative bg-white/80 backdrop-blur-xl border border-gray-200 shadow-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-green-200">
               {/* Border Glow */}
-              <div className="absolute inset-0 bg-linear-to-r from-green-400 via-blue-300 to-purple-300 opacity-0 group-hover:opacity-20 blur-2xl transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-300 to-purple-300 opacity-0 group-hover:opacity-20 blur-2xl transition-all duration-500"></div>
 
               {/* Light Background Pattern */}
-              <div className="absolute inset-0 bg-linear-to-br from-green-50 via-blue-50 to-purple-50 opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 opacity-60"></div>
               {/* contact form  */}
               <div className="relative z-10">
                 {/* Heading */}
-                <div className="text-center mb-10">
-                  <h2 className="text-4xl font-extrabold bg-linear-to-r from-green-700 to-green-400 bg-clip-text text-transparent">
+                <div className="text-center mb-6 sm:mb-8 md:mb-10">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-green-700 to-green-400 bg-clip-text text-transparent">
                     Submit Your Application
                   </h2>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 mt-2 text-sm sm:text-base">
                     We respond within 24 hours
                   </p>
                 </div>
 
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
                   {/* Name + Email */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <input
                       type="text"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-xl"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border rounded-lg sm:rounded-xl text-sm sm:text-base"
                       placeholder="Full Name"
                     />
 
@@ -317,20 +316,20 @@ export default function ContactHeader() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-xl"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border rounded-lg sm:rounded-xl text-sm sm:text-base"
                       placeholder="Email Address"
                     />
                   </div>
 
                   {/* Mobile + Service */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <input
                       type="tel"
                       name="mobile"
                       required
                       value={formData.mobile}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-xl"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border rounded-lg sm:rounded-xl text-sm sm:text-base"
                       placeholder="Mobile Number"
                     />
 
@@ -339,7 +338,7 @@ export default function ContactHeader() {
                       required
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-xl"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border rounded-lg sm:rounded-xl text-sm sm:text-base"
                     >
                       <option value="">Select Service</option>
                       <option value="Digital Marketing">

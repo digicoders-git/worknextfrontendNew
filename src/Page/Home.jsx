@@ -14,7 +14,7 @@ function Home() {
       <Services />
       <FeaturedProjects />
       <TransformBussnation />
-      <TestimonialCarousel />
+      {/* <TestimonialCarousel /> */}
       <Footer />
     </>
   );

@@ -133,7 +133,7 @@ function Home_heading() {
           loop={true}
           className="
             flex absolute bottom-0 left-1/2 -translate-x-1/2
-            w-[380px] sm:w-[450px] md:w-[500px] lg:w-[650px] xl:w-[700px]
+            w-[310px] sm:w-[380px] md:w-[500px] lg:w-[650px] xl:w-[700px]
             pb-[200px]
             h-[800px]
             translate-y-[65%]
@@ -185,7 +185,7 @@ function Home_heading() {
       <div className="w-full px-4 sm:px-6 lg:px-8 mt-0">
         <div
           className="
-            max-w-[1500px] 
+            max-w-[1250px] 
             mx-auto 
             text-center 
             text-base sm:text-lg md:text-xl

@@ -63,7 +63,7 @@ const Project = () => {
       ],
       client: "ATC Company",
       duration: "4 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       projectUrl: "https://www.alsuwaiditechnical.com/",
       featured: true,
@@ -99,7 +99,7 @@ const Project = () => {
       ],
       client: "ATC Company",
       duration: "3 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       projectUrl: "https://simplebooklet.com/alsuwaidi",
       featured: true,
@@ -131,7 +131,7 @@ const Project = () => {
       ],
       client: "ATC Company",
       duration: "2 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       projectUrl: "https://simplebooklet.com/alsuwaidi",
       featured: false,
@@ -163,7 +163,7 @@ const Project = () => {
       ],
       client: "ATC Company",
       duration: "1.5 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       projectUrl: "https://simplebooklet.com/alsuwaidi",
       featured: false,
@@ -202,7 +202,7 @@ const Project = () => {
       ],
       client: "MyoPain Medical Center",
       duration: "2 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       projectUrl: "https://simplebooklet.com/alsuwaidi",
       featured: true,
@@ -227,16 +227,16 @@ const Project = () => {
       image: "/golden choice main photo.png",
       images: [
         "/golden choice main photo.png",
-        "/file/1000175265.png",
-        "/file/1000505645.png",
-        "/file/1000522339.png",
-        "/file/1000528897.png",
-        "/file/2_20260103_185403_0001.png",
-        "/file/4_20260103_185403_0003.png",
-        "/file/5_20260103_185403_0004.png",
-        "/file/6_20260103_185403_0005.png",
-        "/file/7_20260103_185403_0006 (1).png",
-        "/file/8_20260103_185403_0007.png",
+        "/image copy 3.png",
+        "/image copy 4.png",
+        "/image copy 5.png",
+        "/image copy 6.png",
+        "/image copy 7.png",
+        "/image copy 8.png",
+        // "/file/5_20260103_185403_0004.png",
+        "/image copy 9.png",
+       
+        
       ],
       technologies: [
         "Social Media Design",
@@ -244,9 +244,9 @@ const Project = () => {
         "LinkedIn",
         "Facebook",
       ],
-      client: "Golden Choice Contracting & Services",
+      client: "Golden Choice Contracting ",
       duration: "1 month",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       projectUrl: "https://simplebooklet.com/alsuwaidi",
       featured: false,
@@ -274,7 +274,7 @@ const Project = () => {
       technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis", "AWS"],
       client: "TechCorp Solutions",
       duration: "6 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       link: "#",
       featured: true,
@@ -307,7 +307,7 @@ const Project = () => {
       ],
       client: "FinanceBank International",
       duration: "8 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       link: "#",
       featured: true,
@@ -339,7 +339,7 @@ const Project = () => {
       ],
       client: "Global StartupXYZ",
       duration: "4 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       link: "#",
       featured: false,
@@ -372,7 +372,7 @@ const Project = () => {
       ],
       client: "Fashion Empire Brand",
       duration: "5 months",
-      year: "2024",
+      year: "2025",
       status: "Ongoing",
       link: "#",
       featured: false,
@@ -497,7 +497,7 @@ const Project = () => {
       technologies: ["Python", "TensorFlow", "NLP", "DialogFlow", "REST APIs"],
       client: "Customer Service Solutions",
       duration: "4 months",
-      year: "2024",
+      year: "2025",
       status: "Completed",
       link: "#",
       featured: false,
@@ -686,21 +686,21 @@ const Project = () => {
       </section>
 
       {/* Stats Section - Green Design */}
-      <section className="py-16 bg-gradient-to-b from-white to-green-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      <section className="py-8 sm:py-12 md:py-14 lg:py-16 bg-gradient-to-b from-white to-green-50">
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="group relative">
-                <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 hover:border-green-200">
+                <div className="bg-white rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 text-center shadow-md sm:shadow-lg hover:shadow-xl lg:hover:shadow-2xl transition-all duration-300 border border-green-100 hover:border-green-200 h-full flex flex-col justify-center">
                   <div
-                    className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${stat.color} mb-4 shadow-md`}
+                    className={`inline-flex p-2 sm:p-3 rounded-lg sm:rounded-xl bg-gradient-to-r ${stat.color} mb-2 sm:mb-3 lg:mb-4 shadow-md mx-auto`}
                   >
-                    <stat.icon className="text-2xl text-white" />
+                    <stat.icon className="text-lg sm:text-xl lg:text-2xl text-white" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-xs sm:text-sm lg:text-base text-gray-600 font-medium leading-tight">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -709,48 +709,50 @@ const Project = () => {
       </section>
 
       {/* Technologies Section - Green Cards */}
-      <section className="py-16 bg-gradient-to-b from-green-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-8 sm:py-12 md:py-14 lg:py-16 bg-gradient-to-b from-green-50 to-white">
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Tech Stack
               </span>{" "}
               Expertise
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
               We master cutting-edge technologies to build scalable and
               future-proof solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-green-100 hover:border-green-200"
+                className="group bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 shadow-md hover:shadow-lg lg:hover:shadow-xl transition-all duration-300 border border-green-100 hover:border-green-200 flex flex-col h-full"
               >
-                <div className="flex items-center mb-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50">
-                    <tech.icon className="text-xl text-green-600" />
+                <div className="flex flex-col sm:flex-row items-start sm:items-center mb-3 sm:mb-4">
+                  <div className="p-2 sm:p-3 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 mb-2 sm:mb-0">
+                    <tech.icon className="text-lg sm:text-xl text-green-600" />
                   </div>
-                  <div className="ml-4">
-                    <h3 className="font-bold text-gray-900">{tech.name}</h3>
-                    <p className="text-sm text-gray-500">
+                  <div className="sm:ml-3 md:ml-4 flex-grow">
+                    <h3 className="font-bold text-gray-900 text-sm sm:text-base">{tech.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-500">
                       {tech.projects} projects
                     </p>
                   </div>
                 </div>
-                <div className="w-full bg-green-100 rounded-full h-2">
-                  <div
-                    className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full"
-                    style={{ width: `${tech.level}%` }}
-                  ></div>
-                </div>
-                <div className="text-right mt-1">
-                  <span className="text-sm font-medium text-green-700">
-                    {tech.level}%
-                  </span>
+                <div className="mt-auto">
+                  <div className="w-full bg-green-100 rounded-full h-1.5 sm:h-2">
+                    <div
+                      className="bg-gradient-to-r from-green-500 to-emerald-500 h-1.5 sm:h-2 rounded-full transition-all duration-500"
+                      style={{ width: `${tech.level}%` }}
+                    ></div>
+                  </div>
+                  <div className="text-right mt-1">
+                    <span className="text-xs sm:text-sm font-medium text-green-700">
+                      {tech.level}%
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -759,61 +761,50 @@ const Project = () => {
       </section>
 
       {/* Projects Section - Green Grid with Filters */}
-      <section id="projects" className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section id="projects" className="py-6 sm:py-8 md:py-12 lg:py-16 bg-white">
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
               Featured{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Projects
               </span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg mb-8">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
               Explore our curated selection of innovative projects that showcase
               our technical expertise and creative problem-solving approach
             </p>
           </div>
 
-          {/* Search and Filter Bar */}
-
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {filteredProjects.slice(0, visibleProjects).map((project) => (
               <div
                 key={project.id}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-green-100 hover:border-green-300 transform hover:-translate-y-2"
+                className="group bg-white rounded-lg sm:rounded-xl lg:rounded-2xl overflow-hidden shadow-md sm:shadow-lg hover:shadow-xl lg:hover:shadow-2xl transition-all duration-500 border border-green-100 hover:border-green-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 flex flex-col h-full w-full"
               >
                 {/* Project Image with Overlay */}
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative h-40 sm:h-48 md:h-52 lg:h-64 overflow-hidden flex-shrink-0">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-700"
                     onError={(e) => {
                       e.target.src =
                         "https://via.placeholder.com/600x400/10b981/ffffff?text=Project+Image";
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 via-transparent to-transparent"></div>
-
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="bg-green-600/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
-                      {
-                        categories.find((cat) => cat.id === project.category)
-                          ?.name
-                      }
-                    </span>
-                  </div>
                 </div>
 
                 {/* Project Content */}
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors line-clamp-2">
+                <div className="p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col flex-grow">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 sm:mb-3 gap-2 sm:gap-0">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors line-clamp-2 flex-grow">
                       {project.title}
                     </h3>
                     <span
-                      className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                      className={`text-xs font-semibold px-2 sm:px-3 py-1 rounded-full self-start sm:ml-2 flex-shrink-0 ${
                         project.status === "Completed"
                           ? "bg-green-100 text-green-800"
                           : "bg-amber-100 text-amber-800"
@@ -823,29 +814,25 @@ const Project = () => {
                     </span>
                   </div>
 
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3 flex-grow leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
-
-                  {/* Stats */}
-
                   {/* Results and CTA */}
-                  <div className="pt-4 border-t border-green-100">
-                    <div className="flex items-center justify-between">
-                      <div>
+                  <div className="pt-3 sm:pt-4 border-t border-green-100 mt-auto">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                      <div className="flex-grow">
                         <p className="text-xs text-green-600">Client</p>
-                        <p className="font-semibold text-gray-900">
+                        <p className="font-semibold text-gray-900 text-xs sm:text-sm truncate">
                           {project.client}
                         </p>
                       </div>
                       <a
                         onClick={() => openProjectModal(project)}
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 font-medium rounded-lg hover:from-green-100 hover:to-emerald-100 transition-all cursor-pointer"
+                        className="inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 font-medium rounded-md sm:rounded-lg hover:from-green-100 hover:to-emerald-100 transition-all cursor-pointer flex-shrink-0 w-full sm:w-auto"
                       >
-                        <Eye className="mr-2" size={18} />
-                        View Details
+                        <Eye className="mr-1 sm:mr-2" size={14} />
+                        <span className="text-xs sm:text-sm">View Details</span>
                       </a>
                     </div>
                   </div>
@@ -856,13 +843,13 @@ const Project = () => {
 
           {/* Load More Button */}
           {visibleProjects < filteredProjects.length && (
-            <div className="text-center mt-12">
+            <div className="text-center mt-6 sm:mt-8 md:mt-10 lg:mt-12">
               <button
                 onClick={loadMore}
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-md sm:rounded-lg lg:rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-xs sm:text-sm md:text-base"
               >
                 Load More Projects
-                <ArrowRight className="ml-2" />
+                <ArrowRight className="ml-2" size={14} />
               </button>
             </div>
           )}
@@ -870,41 +857,41 @@ const Project = () => {
       </section>
 
       {/* Achievements Section - Green Cards */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-8 sm:py-12 md:py-14 lg:py-16 bg-white">
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
               Our{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Achievements
               </span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
               Recognition and milestones that showcase our commitment to
               excellence
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             {achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200"
+                className="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 shadow-md sm:shadow-lg hover:shadow-xl lg:hover:shadow-2xl transition-all duration-300 border border-green-200 flex flex-col h-full"
               >
-                <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 mb-4 shadow-md">
-                  <achievement.icon className="text-2xl text-white" />
+                <div className="inline-flex p-2 sm:p-3 rounded-lg sm:rounded-xl mb-3 sm:mb-4">
+                  <achievement.icon className="text-lg sm:text-xl lg:text-2xl text-green-600" />
                 </div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">
+                <h3 className="font-bold text-gray-900 text-sm sm:text-base md:text-lg mb-2 sm:mb-3 flex-grow">
                   {achievement.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed flex-grow">
                   {achievement.description}
                 </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-medium text-green-700 bg-green-100 px-3 py-1 rounded-full">
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-xs font-medium text-green-700 bg-green-100 px-2 sm:px-3 py-1 rounded-full">
                     {achievement.year}
                   </span>
-                  <CheckCircle className="text-green-500" size={20} />
+                  <CheckCircle className="text-green-500" size={16} />
                 </div>
               </div>
             ))}
@@ -914,21 +901,21 @@ const Project = () => {
       {/* CTA Section - Green Theme */}
       <TransformBussnation />
       {/* Process Section - Green Timeline */}
-      <section className="py-16 bg-gradient-to-b from-green-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-8 sm:py-12 md:py-14 lg:py-16 bg-gradient-to-b from-green-50 to-white">
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4">
               Our Project{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                 Process
               </span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2 sm:px-0">
               A systematic approach that ensures successful project delivery
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-7 lg:gap-8">
             {[
               {
                 step: "01",
@@ -961,23 +948,21 @@ const Project = () => {
               },
             ].map((process, index) => (
               <div key={index} className="relative group">
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 hover:border-green-200 h-full">
-                  <div
-                    className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${process.color} mb-6 shadow-md`}
-                  >
-                    <process.icon className="text-2xl text-white" />
+                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 shadow-md sm:shadow-lg hover:shadow-xl lg:hover:shadow-2xl transition-all duration-300 border border-green-200 hover:border-green-300 h-full flex flex-col">
+                  <div className="inline-flex p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl mb-3 sm:mb-4 lg:mb-6">
+                    <process.icon className="text-lg sm:text-xl lg:text-2xl text-green-600" />
                   </div>
-                  <div className="text-sm font-bold text-green-600 mb-2">
+                  <div className="text-xs sm:text-sm font-bold text-green-600 mb-1 sm:mb-2">
                     STEP {process.step}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-3 flex-grow">
                     {process.title}
                   </h3>
-                  <p className="text-gray-600">{process.description}</p>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{process.description}</p>
                 </div>
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                    <div className="w-6 h-0.5 bg-gradient-to-r from-green-300 to-emerald-300 group-hover:from-green-400 group-hover:to-emerald-400 transition-all"></div>
+                    <div className="w-4 lg:w-6 h-0.5 bg-gradient-to-r from-green-300 to-emerald-300 group-hover:from-green-400 group-hover:to-emerald-400 transition-all"></div>
                   </div>
                 )}
               </div>
@@ -990,15 +975,15 @@ const Project = () => {
 
       {/* Project Details Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4 backdrop-blur-md">
-          <div className="bg-white rounded-3xl max-w-7xl w-full max-h-[95vh] overflow-hidden shadow-2xl border border-gray-100">
-            <div className="relative">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-1 sm:p-4 backdrop-blur-md">
+          <div className="bg-white rounded-lg sm:rounded-2xl lg:rounded-3xl w-full max-w-sm sm:max-w-2xl lg:max-w-7xl my-4 sm:my-8 lg:my-[100px] max-h-[95vh] sm:max-h-[90vh] lg:max-h-[calc(100vh-200px)] overflow-hidden shadow-2xl border border-gray-100">
+            <div className="relative h-full">
               <button
                 onClick={closeProjectModal}
-                className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-xl hover:bg-white hover:scale-110 transition-all duration-300 border border-gray-200"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:top-6 lg:right-6 z-20 bg-white/90 backdrop-blur-sm rounded-full p-1.5 sm:p-2 lg:p-3 shadow-xl hover:bg-white hover:scale-110 transition-all duration-300 border border-gray-200"
               >
                 <svg
-                  className="w-5 h-5 text-gray-700"
+                  className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-gray-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1012,9 +997,9 @@ const Project = () => {
                 </svg>
               </button>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 h-[95vh] max-h-[800px]">
+              <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 h-full">
                 {/* Left Side - Image */}
-                <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center h-48 sm:h-64 md:h-80 lg:h-[500px]">
                   <img
                     src={
                       selectedProject.images
@@ -1022,7 +1007,7 @@ const Project = () => {
                         : selectedProject.image
                     }
                     alt={selectedProject.title}
-                    className="max-w-full max-h-[500px] object-contain drop-shadow-2xl"
+                    className="w-full h-full object-contain p-2 sm:p-4"
                     onError={(e) => {
                       e.target.src =
                         "https://via.placeholder.com/800x600/10b981/ffffff?text=Image+Not+Found";
@@ -1034,10 +1019,10 @@ const Project = () => {
                       <>
                         <button
                           onClick={prevImage}
-                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-3 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg"
+                          className="absolute left-1 sm:left-2 lg:left-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-1.5 sm:p-2 lg:p-3 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg"
                         >
                           <svg
-                            className="w-5 h-5"
+                            className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -1052,10 +1037,10 @@ const Project = () => {
                         </button>
                         <button
                           onClick={nextImage}
-                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-3 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg"
+                          className="absolute right-1 sm:right-2 lg:right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-1.5 sm:p-2 lg:p-3 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg"
                         >
                           <svg
-                            className="w-5 h-5"
+                            className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -1068,12 +1053,12 @@ const Project = () => {
                             />
                           </svg>
                         </button>
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        <div className="absolute bottom-1 sm:bottom-2 lg:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
                           {selectedProject.images.map((_, index) => (
                             <button
                               key={index}
                               onClick={() => setCurrentImageIndex(index)}
-                              className={`w-3 h-3 rounded-full transition-all shadow-md ${
+                              className={`w-1.5 h-1.5 sm:w-2 sm:h-2 lg:w-3 lg:h-3 rounded-full transition-all shadow-md ${
                                 index === currentImageIndex
                                   ? "bg-green-500 scale-125"
                                   : "bg-white bg-opacity-70 hover:bg-opacity-100"
@@ -1086,58 +1071,58 @@ const Project = () => {
                 </div>
 
                 {/* Right Side - Content */}
-                <div className="p-8 flex flex-col justify-between">
-                  <div>
-                    <div className="mb-6">
-                      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+                <div className="flex flex-col h-full lg:h-auto overflow-hidden">
+                  <div className="p-3 sm:p-4 lg:p-8 flex-1 overflow-y-auto max-h-[300px] sm:max-h-[400px] lg:max-h-[500px]">
+                    <div className="mb-3 sm:mb-4 lg:mb-6">
+                      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-2">
                         {selectedProject.title}
                       </h2>
-                      <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3 lg:mb-4 space-y-1 sm:space-y-0">
                         <span className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-1" />
+                          <Calendar className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                           {selectedProject.year}
                         </span>
                         <span className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
+                          <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                           {selectedProject.client}
                         </span>
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 mb-6">
-                      <p className="text-gray-700 text-lg leading-relaxed">
+                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 mb-3 sm:mb-4 lg:mb-6">
+                      <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
                         {selectedProject.fullDescription}
                       </p>
                     </div>
 
-                    <div className="mb-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                    <div className="mb-3 sm:mb-4 lg:mb-6">
+                      <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 lg:mb-4 flex items-center">
+                        <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-green-500 mr-2" />
                         Key Highlights
                       </h3>
-                      <ul className="space-y-3">
+                      <ul className="space-y-1 sm:space-y-2 lg:space-y-3">
                         {selectedProject.highlights.map((highlight, index) => (
                           <li
                             key={index}
-                            className="flex items-start text-gray-600"
+                            className="flex items-start text-gray-600 text-xs sm:text-sm lg:text-base"
                           >
-                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
                             {highlight}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="mb-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <Settings className="w-5 h-5 text-green-500 mr-2" />
+                    <div className="mb-3 sm:mb-4 lg:mb-6">
+                      <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 lg:mb-4 flex items-center">
+                        <Settings className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-green-500 mr-2" />
                         Technologies Used
                       </h3>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1 sm:gap-2">
                         {selectedProject.technologies.map((tech, index) => (
                           <span
                             key={index}
-                            className="bg-white border border-green-200 text-green-700 px-3 py-1 rounded-lg text-sm font-medium shadow-sm"
+                            className="bg-white border border-green-200 text-green-700 px-2 sm:px-3 py-0.5 sm:py-1 rounded-md sm:rounded-lg text-xs font-medium shadow-sm"
                           >
                             {tech}
                           </span>
@@ -1146,15 +1131,15 @@ const Project = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-center justify-end pt-6 border-t border-gray-200 space-y-4 sm:space-y-0 sm:space-x-4">
+                  <div className="flex flex-col sm:flex-row items-center justify-end p-3 sm:p-4 lg:p-8 pt-2 sm:pt-4 lg:pt-6 border-t border-gray-200 space-y-2 sm:space-y-0 sm:space-x-4 bg-gray-50">
                     {selectedProject.projectUrl ? (
                       <a
                         href={selectedProject.projectUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center"
+                        className="w-full sm:w-auto bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center text-xs sm:text-sm lg:text-base"
                       >
-                        <Globe className="w-5 h-5 mr-2" />
+                        <Globe className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 mr-2" />
                         {selectedProject.id === 0
                           ? "View Live Project"
                           : "View More Details"}
@@ -1165,9 +1150,9 @@ const Project = () => {
 
                     <button
                       onClick={closeProjectModal}
-                      className="bg-gray-100 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all border border-gray-300"
+                      className="w-full sm:w-auto bg-gray-100 text-gray-700 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold hover:bg-gray-200 transition-all border border-gray-300 text-xs sm:text-sm lg:text-base"
                     >
-                      Close Details
+                      Close
                     </button>
                   </div>
                 </div>
