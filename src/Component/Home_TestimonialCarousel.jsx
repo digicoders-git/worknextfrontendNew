@@ -36,7 +36,7 @@ export default function Testimonials() {
       rating: 5,
       img: "/WhatsApp Image 2025-12-11 at 20.34.49.jpeg",
       comment:
-        "“Working with Worknest Connect was a smooth and well-organized experience. The team delivered our website, company profile, and logo with strong attention to detail and clear understanding of our requirements. Their structured approach and timely execution helped us present our business more professionally and confidently. We truly appreciate their support and commitment to quality.”"
+        "Working with Worknest Connect was a smooth and well-organized experience. The team delivered our website, company profile, and logo with strong attention to detail and clear understanding of our requirements. Their structured approach and timely execution helped us present our business more professionally and confidently. We truly appreciate their support and commitment to quality."
     },
     {
       name: "Mr. Khalid Farooq",

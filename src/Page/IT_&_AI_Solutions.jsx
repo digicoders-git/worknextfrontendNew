@@ -348,6 +348,7 @@ const ITAndAISolutions = () => {
             {services.map((service, index) => (
               <div
                 key={service.id}
+                id={service.id === 1 ? "erp" : undefined}
                 ref={(el) => (serviceCardsRef.current[index] = el)}
                 className={`
             group rounded-3xl shadow-xl hover:shadow-2xl overflow-hidden 

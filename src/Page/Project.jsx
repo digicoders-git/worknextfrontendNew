@@ -15,28 +15,23 @@ import {
   Users,
   Calendar,
   Handshake,
-  Lightbulb,
-  Trophy,
-  Settings,
-  Shield,
+  CheckCircle,
   Bot,
   Database,
   Cloud,
   ShoppingCart,
   Search,
   BarChart3,
-  CheckCircle,
-  ThumbsUp,
-     
+  Lightbulb,
+  Trophy,
+  Shield,
+  Settings,
 } from "lucide-react";
 import Footer from "../Component/Footer";
 import TransformBussnation from "../Component/TransformBussnation";
-import TransformBussnationCV from "../Component/TransformBussnationCV";
 
 const Project = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
   const [visibleProjects, setVisibleProjects] = useState(6);
-  const [searchTerm, setSearchTerm] = useState("");
 
   const categories = [
     { id: "all", name: "All Projects", icon: Globe, count: 200 },
@@ -50,6 +45,225 @@ const Project = () => {
 
   const projects = [
     {
+      id: 0,
+      title: "ATC Website",
+      category: "web",
+      description:
+        "The ATC Website was designed and developed to establish a strong digital presence for a technical and engineering-focused organization. The goal was to create a professional, structured, and easy-to-navigate platform that clearly communicates services, capabilities, and company credibility.",
+      image: "/Project/ATC website main photo.png",
+      images: ["/Project/ATC website main photo.png"],
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+      ],
+      client: "ATC Company",
+      duration: "4 months",
+      year: "2024",
+      status: "Completed",
+      projectUrl: "https://www.alsuwaiditechnical.com/",
+      featured: true,
+      results: "Strong digital presence, professional platform",
+      likes: 200,
+      views: 1200,
+      highlights: [
+        "Professional digital presence",
+        "Technical and engineering focus",
+        "Easy-to-navigate platform",
+        "Clear service communication",
+      ],
+      fullDescription:
+        "The ATC Website was designed and developed to establish a strong digital presence for a technical and engineering-focused organization. The goal was to create a professional, structured, and easy-to-navigate platform that clearly communicates services, capabilities, and company credibility.",
+    },
+    {
+      id: 9,
+      title: "ATC Company Profile Website",
+      category: "web",
+      description:
+        "A professionally structured company profile designed to clearly present ATC's services, strengths, and brand identity. Clean corporate layout with consistent branding.",
+      image: "/Company profile main photo.png",
+      images: [
+        "/Company profile main photo.png",
+        "/Company profile more photo.png",
+      ],
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "Responsive Design",
+      ],
+      client: "ATC Company",
+      duration: "3 months",
+      year: "2024",
+      status: "Completed",
+      projectUrl: "https://simplebooklet.com/alsuwaidi",
+      featured: true,
+      results: "Professional brand presentation, client-ready format",
+      likes: 156,
+      views: 892,
+      highlights: [
+        "Clean, corporate layout",
+        "Clear service overview",
+        "Consistent branding",
+        "Print-ready format",
+      ],
+      fullDescription:
+        "A professionally structured company profile designed to clearly present ATC's services, strengths, and brand identity. Perfect for client meetings and proposals.",
+    },
+    {
+      id: 10,
+      title: "ATC Corporate Calendar Design",
+      category: "design",
+      description:
+        "Complete corporate calendar set including wall and table calendars, created to ensure year-round brand visibility with clean and professional design.",
+      image: "/ATC Calendar.png",
+      images: ["/ATC Calendar.png"],
+      technologies: [
+        "Adobe InDesign",
+        "Photoshop",
+        "Print Design",
+        "Brand Guidelines",
+      ],
+      client: "ATC Company",
+      duration: "2 months",
+      year: "2024",
+      status: "Completed",
+      projectUrl: "https://simplebooklet.com/alsuwaidi",
+      featured: false,
+      results: "Year-round brand visibility, professional finish",
+      likes: 89,
+      views: 567,
+      highlights: [
+        "Large, easy-to-read layout",
+        "Strong brand placement",
+        "Print-ready finish",
+        "Desk-friendly design",
+      ],
+      fullDescription:
+        "Complete corporate calendar set including wall and table calendars, created to ensure year-round brand visibility with clean and professional design.",
+    },
+    {
+      id: 11,
+      title: "ATC Company Brochure",
+      category: "design",
+      description:
+        "A modern and well-structured company brochure designed to showcase ATC's services and capabilities with strong corporate appeal.",
+      image: "/brochure main photo.png",
+      images: ["/brochure main photo.png", "/brochure more photo.png"],
+      technologies: [
+        "Adobe InDesign",
+        "Illustrator",
+        "Print Design",
+        "Digital Format",
+      ],
+      client: "ATC Company",
+      duration: "1.5 months",
+      year: "2024",
+      status: "Completed",
+      projectUrl: "https://simplebooklet.com/alsuwaidi",
+      featured: false,
+      results: "Professional service presentation, print & digital ready",
+      likes: 67,
+      views: 423,
+      highlights: [
+        "Professional layout",
+        "Clear service presentation",
+        "Print and digital ready",
+        "Corporate appeal",
+      ],
+      fullDescription:
+        "A modern and well-structured company brochure designed to showcase ATC's services and capabilities with strong corporate appeal.",
+    },
+    {
+      id: 12,
+      title: "MyoPain Medical Center - Social Media Ads",
+      category: "marketing",
+      description:
+        "Targeted social media ad campaigns designed to generate patient enquiries and appointments within a short timeframe with strong engagement and ROI.",
+      image: "/MyoPain main photo.png",
+      images: [
+        "/MyoPain main photo.png",
+        "/1_20260103_193809_0000.png",
+        "/2_20260103_193809_0001.png",
+        "/3_20260103_193809_0002.png",
+        "/4_20260103_193809_0003.png",
+        "/5_20260103_193809_0004.png",
+      ],
+      technologies: [
+        "Facebook Ads",
+        "Instagram Marketing",
+        "Canva",
+        "Analytics",
+      ],
+      client: "MyoPain Medical Center",
+      duration: "2 months",
+      year: "2024",
+      status: "Completed",
+      projectUrl: "https://simplebooklet.com/alsuwaidi",
+      featured: true,
+      results: "6-8 new clients within weeks, improved enquiry flow",
+      likes: 134,
+      views: 756,
+      highlights: [
+        "6-8 new clients acquired",
+        "Improved enquiry flow",
+        "Strong engagement and ROI",
+        "Facebook & Instagram platforms",
+      ],
+      fullDescription:
+        "Targeted social media ad campaigns designed to generate patient enquiries and appointments within a short timeframe. Successfully acquired 6-8 new clients within weeks.",
+    },
+    {
+      id: 13,
+      title: "Golden Choice Contracting - Social Media Branding",
+      category: "marketing",
+      description:
+        "Complete social media branding to build consistent and professional online presence with LinkedIn & Facebook assets and professional display pictures.",
+      image: "/golden choice main photo.png",
+      images: [
+        "/golden choice main photo.png",
+        "/file/1000175265.png",
+        "/file/1000505645.png",
+        "/file/1000522339.png",
+        "/file/1000528897.png",
+        "/file/2_20260103_185403_0001.png",
+        "/file/4_20260103_185403_0003.png",
+        "/file/5_20260103_185403_0004.png",
+        "/file/6_20260103_185403_0005.png",
+        "/file/7_20260103_185403_0006 (1).png",
+        "/file/8_20260103_185403_0007.png",
+      ],
+      technologies: [
+        "Social Media Design",
+        "Brand Identity",
+        "LinkedIn",
+        "Facebook",
+      ],
+      client: "Golden Choice Contracting & Services",
+      duration: "1 month",
+      year: "2024",
+      status: "Completed",
+      projectUrl: "https://simplebooklet.com/alsuwaidi",
+      featured: false,
+      results: "Improved brand consistency, stronger professional image",
+      likes: 98,
+      views: 445,
+      highlights: [
+        "Social media posts",
+        "LinkedIn & Facebook covers",
+        "Professional display pictures",
+        "Brand consistency",
+      ],
+      fullDescription:
+        "Complete social media branding to build consistent and professional online presence. Deliverables include social media posts, LinkedIn & Facebook cover photos, and professional display pictures.",
+    },
+
+    {
       id: 1,
       title: "E-Commerce Platform Revolution",
       category: "ecommerce",
@@ -62,12 +276,19 @@ const Project = () => {
       duration: "6 months",
       year: "2024",
       status: "Completed",
-      
       link: "#",
       featured: true,
       results: "300% increase in sales, 50% faster load times",
       likes: 245,
       views: 1567,
+      highlights: [
+        "Advanced analytics",
+        "AI-powered recommendations",
+        "Seamless payment integration",
+        "Complete e-commerce ecosystem",
+      ],
+      fullDescription:
+        "Complete e-commerce ecosystem with advanced analytics, AI-powered recommendations, and seamless payment integration. This revolutionary platform transformed online retail with cutting-edge technology and user-centric design.",
     },
     {
       id: 2,
@@ -93,6 +314,14 @@ const Project = () => {
       results: "1M+ downloads, 4.8 app store rating",
       likes: 312,
       views: 1890,
+      highlights: [
+        "Biometric authentication",
+        "AI fraud detection",
+        "1M+ downloads",
+        "4.8 app store rating",
+      ],
+      fullDescription:
+        "Revolutionary mobile banking application with biometric authentication and AI fraud detection. Achieved over 1 million downloads with exceptional user ratings.",
     },
     {
       id: 3,
@@ -117,6 +346,14 @@ const Project = () => {
       results: "200% brand recognition increase",
       likes: 187,
       views: 1245,
+      highlights: [
+        "Complete brand transformation",
+        "Logo design",
+        "Brand guidelines",
+        "200% recognition increase",
+      ],
+      fullDescription:
+        "Complete brand transformation including logo design, brand guidelines, and marketing collaterals. Achieved 200% increase in brand recognition through strategic design.",
     },
     {
       id: 4,
@@ -142,6 +379,14 @@ const Project = () => {
       results: "400% engagement increase, 250% ROI",
       likes: 156,
       views: 1123,
+      highlights: [
+        "Machine learning targeting",
+        "Personalized content",
+        "400% engagement increase",
+        "250% ROI",
+      ],
+      fullDescription:
+        "Data-driven marketing campaign using machine learning for audience targeting and personalized content delivery. Achieved remarkable 400% engagement increase with 250% ROI.",
     },
     {
       id: 5,
@@ -167,6 +412,14 @@ const Project = () => {
       results: "10,000+ patients managed, 95% satisfaction",
       likes: 298,
       views: 1678,
+      highlights: [
+        "Patient management",
+        "Telemedicine integration",
+        "10,000+ patients managed",
+        "95% satisfaction rate",
+      ],
+      fullDescription:
+        "Comprehensive healthcare platform with patient management, telemedicine, and medical records integration. Successfully manages over 10,000 patients with 95% satisfaction rate.",
     },
     {
       id: 6,
@@ -191,6 +444,14 @@ const Project = () => {
       results: "500K+ orders, 30% faster delivery",
       likes: 234,
       views: 1456,
+      highlights: [
+        "AI route optimization",
+        "Real-time tracking",
+        "500K+ orders",
+        "30% faster delivery",
+      ],
+      fullDescription:
+        "Intelligent food delivery app with AI route optimization, real-time tracking, and predictive ordering. Processed over 500K orders with 30% faster delivery times.",
     },
     {
       id: 7,
@@ -216,6 +477,14 @@ const Project = () => {
       results: "40% operational efficiency increase",
       likes: 276,
       views: 1567,
+      highlights: [
+        "Custom ERP solution",
+        "Inventory management",
+        "Financial reporting",
+        "40% efficiency increase",
+      ],
+      fullDescription:
+        "Custom ERP solution for manufacturing companies with inventory management and financial reporting. Achieved 40% operational efficiency increase through streamlined processes.",
     },
     {
       id: 8,
@@ -235,39 +504,76 @@ const Project = () => {
       results: "80% query resolution, 24/7 availability",
       likes: 189,
       views: 1324,
+      highlights: [
+        "Natural language processing",
+        "24/7 support availability",
+        "80% query resolution",
+        "REST API integration",
+      ],
+      fullDescription:
+        "Intelligent customer service chatbot with natural language processing for 24/7 support. Successfully resolves 80% of customer queries automatically with advanced AI capabilities.",
     },
   ];
 
-const stats = [
-  {
-    number: "40+",
-    label: "Projects Completed",
-    icon: Award, // achievement / success
-    suffix: "",
-    color: "from-green-500 to-emerald-500",
-  },
-  {
-    number: "99%",
-    label: "Client Satisfaction",
-    icon: Star, // rating / satisfaction
-    suffix: "",
-    color: "from-green-500 to-lime-500",
-  },
-  {
-    number: "100%",
-    label: "Quality Execution",
-    icon: CheckCircle, // quality / approved work
-    suffix: "",
-    color: "from-emerald-500 to-teal-500",
-  },
-  {
-    number: "100%",
-    label: "Trusted Business Partner",
-    icon: Handshake, // trust / partnership
-    suffix: "",
-    color: "from-lime-500 to-green-500",
-  },
-];
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openProjectModal = (project) => {
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+  };
+
+  const closeProjectModal = () => {
+    setSelectedProject(null);
+    setCurrentImageIndex(0);
+  };
+
+  const nextImage = () => {
+    if (selectedProject && selectedProject.images) {
+      setCurrentImageIndex((prev) =>
+        prev === selectedProject.images.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedProject && selectedProject.images) {
+      setCurrentImageIndex((prev) =>
+        prev === 0 ? selectedProject.images.length - 1 : prev - 1
+      );
+    }
+  };
+
+  const stats = [
+    {
+      number: "40+",
+      label: "Projects Completed",
+      icon: Award, // achievement / success
+      suffix: "",
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      number: "99%",
+      label: "Client Satisfaction",
+      icon: Star, // rating / satisfaction
+      suffix: "",
+      color: "from-green-500 to-lime-500",
+    },
+    {
+      number: "100%",
+      label: "Quality Execution",
+      icon: CheckCircle, // quality / approved work
+      suffix: "",
+      color: "from-emerald-500 to-teal-500",
+    },
+    {
+      number: "100%",
+      label: "Trusted Business Partner",
+      icon: Handshake, // trust / partnership
+      suffix: "",
+      color: "from-lime-500 to-green-500",
+    },
+  ];
   const technologies = [
     { name: "React", icon: Code, projects: 45, level: 95 },
     { name: "Node.js", icon: Database, projects: 38, level: 90 },
@@ -284,7 +590,7 @@ const stats = [
       icon: Trophy,
       title: "Trusted Web Development Experts",
       description: "High-quality web development you can trust",
-      year: "2024",
+      year: "2025",
     },
     {
       icon: BarChart3,
@@ -306,17 +612,7 @@ const stats = [
     },
   ];
 
-  const filteredProjects = projects.filter((project) => {
-    const matchesCategory =
-      selectedCategory === "all" || project.category === selectedCategory;
-    const matchesSearch =
-      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.technologies.some((tech) =>
-        tech.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    return matchesCategory && matchesSearch;
-  });
+  const filteredProjects = projects;
 
   const loadMore = () => {
     setVisibleProjects((prev) => prev + 3);
@@ -488,21 +784,17 @@ const stats = [
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-green-100 hover:border-green-300 transform hover:-translate-y-2"
               >
                 {/* Project Image with Overlay */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    onError={(e) => {
+                      e.target.src =
+                        "https://via.placeholder.com/600x400/10b981/ffffff?text=Project+Image";
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 via-transparent to-transparent"></div>
-
-                  {project.featured && (
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-gradient-to-r from-yellow-400 to-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
-                        <Star className="mr-1" size={14} /> Featured
-                      </span>
-                    </div>
-                  )}
 
                   <div className="absolute bottom-4 left-4 right-4">
                     <span className="bg-green-600/90 text-white text-xs font-semibold px-3 py-1 rounded-lg backdrop-blur-sm">
@@ -536,35 +828,8 @@ const stats = [
                   </p>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.slice(0, 4).map((tech, index) => (
-                      <span
-                        key={index}
-                        className="text-xs font-medium bg-green-50 text-green-700 px-3 py-1.5 rounded-lg hover:bg-green-100 hover:text-green-800 transition-colors"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 4 && (
-                      <span className="text-xs font-medium bg-green-100 text-green-600 px-3 py-1.5 rounded-lg">
-                        +{project.technologies.length - 4}
-                      </span>
-                    )}
-                  </div>
 
                   {/* Stats */}
-                  <div className="flex items-center justify-between text-sm text-green-600 mb-4">
-                    <div className="flex items-center space-x-4">
-                      <span className="flex items-center">
-                        <ThumbsUp className="mr-1.5" size={16} />{" "}
-                        {project.likes}
-                      </span>
-                      <span className="flex items-center">
-                        <Eye className="mr-1.5" size={16} /> {project.views}
-                      </span>
-                    </div>
-                    <span className="font-medium">{project.duration}</span>
-                  </div>
 
                   {/* Results and CTA */}
                   <div className="pt-4 border-t border-green-100">
@@ -576,8 +841,8 @@ const stats = [
                         </p>
                       </div>
                       <a
-                        href={project.link}
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 font-medium rounded-lg hover:from-green-100 hover:to-emerald-100 transition-all"
+                        onClick={() => openProjectModal(project)}
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 font-medium rounded-lg hover:from-green-100 hover:to-emerald-100 transition-all cursor-pointer"
                       >
                         <Eye className="mr-2" size={18} />
                         View Details
@@ -722,6 +987,195 @@ const stats = [
       </section>
 
       <Footer />
+
+      {/* Project Details Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4 backdrop-blur-md">
+          <div className="bg-white rounded-3xl max-w-7xl w-full max-h-[95vh] overflow-hidden shadow-2xl border border-gray-100">
+            <div className="relative">
+              <button
+                onClick={closeProjectModal}
+                className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-xl hover:bg-white hover:scale-110 transition-all duration-300 border border-gray-200"
+              >
+                <svg
+                  className="w-5 h-5 text-gray-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 h-[95vh] max-h-[800px]">
+                {/* Left Side - Image */}
+                <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+                  <img
+                    src={
+                      selectedProject.images
+                        ? selectedProject.images[currentImageIndex]
+                        : selectedProject.image
+                    }
+                    alt={selectedProject.title}
+                    className="max-w-full max-h-[500px] object-contain drop-shadow-2xl"
+                    onError={(e) => {
+                      e.target.src =
+                        "https://via.placeholder.com/800x600/10b981/ffffff?text=Image+Not+Found";
+                    }}
+                  />
+
+                  {selectedProject.images &&
+                    selectedProject.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-3 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg"
+                        >
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M15 19l-7-7 7-7"
+                            />
+                          </svg>
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-3 rounded-full hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg"
+                        >
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </button>
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                          {selectedProject.images.map((_, index) => (
+                            <button
+                              key={index}
+                              onClick={() => setCurrentImageIndex(index)}
+                              className={`w-3 h-3 rounded-full transition-all shadow-md ${
+                                index === currentImageIndex
+                                  ? "bg-green-500 scale-125"
+                                  : "bg-white bg-opacity-70 hover:bg-opacity-100"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </>
+                    )}
+                </div>
+
+                {/* Right Side - Content */}
+                <div className="p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="mb-6">
+                      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+                        {selectedProject.title}
+                      </h2>
+                      <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+                        <span className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-1" />
+                          {selectedProject.year}
+                        </span>
+                        <span className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          {selectedProject.client}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 mb-6">
+                      <p className="text-gray-700 text-lg leading-relaxed">
+                        {selectedProject.fullDescription}
+                      </p>
+                    </div>
+
+                    <div className="mb-6">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                        Key Highlights
+                      </h3>
+                      <ul className="space-y-3">
+                        {selectedProject.highlights.map((highlight, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start text-gray-600"
+                          >
+                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mb-6">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <Settings className="w-5 h-5 text-green-500 mr-2" />
+                        Technologies Used
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedProject.technologies.map((tech, index) => (
+                          <span
+                            key={index}
+                            className="bg-white border border-green-200 text-green-700 px-3 py-1 rounded-lg text-sm font-medium shadow-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row items-center justify-end pt-6 border-t border-gray-200 space-y-4 sm:space-y-0 sm:space-x-4">
+                    {selectedProject.projectUrl ? (
+                      <a
+                        href={selectedProject.projectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center"
+                      >
+                        <Globe className="w-5 h-5 mr-2" />
+                        {selectedProject.id === 0
+                          ? "View Live Project"
+                          : "View More Details"}
+                      </a>
+                    ) : (
+                      <div></div>
+                    )}
+
+                    <button
+                      onClick={closeProjectModal}
+                      className="bg-gray-100 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all border border-gray-300"
+                    >
+                      Close Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

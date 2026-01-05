@@ -52,84 +52,7 @@ const DemoPage = () => {
     { size: 6, x: 40, y: 80, delay: 0.5 },
     { size: 10, x: 70, y: 10, delay: 1.5 },
   ];
-  const services = [
-    {
-      Icon: Megaphone,
-      title: "Digital Marketing",
-      description:
-        "Boost your online presence with our comprehensive digital marketing solutions.",
-      features: [
-        "SEO Optimization",
-        "Social Media Management",
-        "Content Marketing Strategy",
-        "Google & Meta Ads",
-      ],
-      gradient: "from-blue-500 to-blue-600",
-    },
-    {
-      Icon: Palette,
-      title: "Graphic Design",
-      description: "Professional design services to make your brand stand out.",
-      features: [
-        "Logo & Brand Identity",
-        "Business Cards & Stationery",
-        "Marketing Materials",
-        "Social Media Graphics",
-      ],
-      gradient: "from-pink-500 to-pink-600",
-    },
-    {
-      Icon: Laptop,
-      title: "Web & App Development",
-      description:
-        "Custom websites and applications tailored to your business needs.",
-      features: [
-        "Website Design & Development",
-        "iOS/Android Apps",
-        "E-commerce Solutions",
-        "Responsive Design",
-      ],
-      gradient: "from-purple-500 to-purple-600",
-    },
-    {
-      Icon: Bot,
-      title: "IT & AI Solutions",
-      description: "Cutting-edge technology solutions for modern businesses.",
-      features: [
-        "Billing & POS Software",
-        "AI Chatbots",
-        "SaaS Development",
-        "Task Management Systems",
-      ],
-      gradient: "from-green-500 to-green-600",
-    },
-    {
-      Icon: TrendingUp,
-      title: "Business Consulting",
-      description: "Strategic guidance to grow and optimize your business.",
-      features: [
-        "Business Setup Support",
-        "Market Entry Guidance",
-        "HR Policy Development",
-        "IT Setup Advisory",
-      ],
-      gradient: "from-orange-500 to-orange-600",
-    },
-    {
-      Icon: Database,
-      title: "Enterprise Resource Planning (ERP) System",
-      description: "Smart business management systems to streamline operations and improve efficiency.",
-      features: [
-        "Finance & Accounting",
-        "HR & Payroll",
-        "Inventory & Procurement",
-        "Sales & CRM",
-        "Reporting & Analytics",
-        "Workflow Automation",
-      ],
-      gradient: "from-indigo-500 to-indigo-600",
-    },
-  ];
+
 
   return (
     <div>
@@ -263,74 +186,8 @@ const DemoPage = () => {
           animation: bounce 3s infinite;
         }
       `}</style>
+<ContactSection/>
 
-      {/* Services Section */}
-      <section
-        id="data"
-        className="relative py-20 bg-white overflow-hidden"
-        Service
-      >
-        {/* Floating bubbles */}
-        {bubbles.map((bubble, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ y: 0 }}
-            animate={{ y: [0, -20, 0] }}
-            transition={{ repeat: Infinity, duration: 6, delay: bubble.delay }}
-            className="absolute rounded-full bg-emerald-100 opacity-40"
-            style={{
-              width: bubble.size,
-              height: bubble.size,
-              top: `${bubble.y}%`,
-              left: `${bubble.x}%`,
-            }}
-          />
-        ))}
-
-        <div className="container mx-auto px-4 relative z-10 Service">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group relative overflow-hidden border-2 border-transparent hover:border-emerald-400"
-              >
-                <div className="mb-6">
-                  <div className={`bg-gradient-to-br ${service.gradient} w-15 h-15 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
-                    <service.Icon className="text-white" size={36} />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-5">{service.description}</p>
-                <ul className="space-y-3">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700">
-                      <div className="bg-emerald-100 p-1.5 rounded-full mr-3">
-                        <Check className="text-emerald-600" size={14} />
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Bubble hover effect inside each card */}
-                <motion.div
-                  className="absolute top-0 left-0 w-full h-full pointer-events-none"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="absolute w-3 h-3 bg-emerald-200 rounded-full top-5 left-10 animate-bounce-slow"></div>
-                  <div className="absolute w-2 h-2 bg-emerald-300 rounded-full top-20 left-24 animate-bounce-slow delay-1000"></div>
-                  <div className="absolute w-4 h-4 bg-emerald-100 rounded-full top-32 left-12 animate-bounce-slow delay-500"></div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section
@@ -357,7 +214,7 @@ const DemoPage = () => {
 
       {/* Contact Section */}
 
-<ContactSection/>
+
       {/* Footer */}
       <Footer />
 

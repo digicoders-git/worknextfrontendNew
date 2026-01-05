@@ -252,18 +252,16 @@ export default function ContactHeader() {
 
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-green-600">
-                  200+
+                  40+
                 </div>
                 <div className="text-sm text-gray-600">Quality Execution</div>
               </div>
 
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-green-600">
-                  15+
+                  99%
                 </div>
-                <div className="text-sm text-gray-600">
-                  Years of Long-Term Partnerships
-                </div>
+                <div className="text-sm text-gray-600">Client Satisfaction</div>
               </div>
             </div>
           </div>

@@ -11,10 +11,58 @@ import {
   Home,
   BookOpen,
   Heart,
+  Database,
 } from "lucide-react";
 
 const CareersPage = () => {
   const Navigate = useNavigate();
+
+  // Our Teams Section
+  const teams = [
+    {
+      icon: <TrendingUp className="text-white" size={32} />,
+      title: "Marketing & Sales Team",
+      description: "Our growth engine—responsible for business development, client acquisition, strategic partnerships, and revenue expansion. This team drives market positioning, builds relationships, and ensures our solutions reach the right audience.",
+      roles: "Sales Executives, Business Development Officers, Account Managers, Client Relationship Managers.",
+      gradient: "from-blue-400 to-blue-600"
+    },
+    {
+      icon: <Settings className="text-white" size={32} />,
+      title: "Operations Team",
+      description: "The backbone of our organization—ensuring smooth project execution, workflow management, quality assurance, vendor coordination, and end-to-end service delivery. They transform strategies into actionable outcomes.",
+      roles: "Operations Executives, Project Coordinators, Admin Support, PRO Executives.",
+      gradient: "from-purple-400 to-purple-600"
+    },
+    {
+      icon: <Palette className="text-white" size={32} />,
+      title: "Creative Design Team",
+      description: "Where imagination becomes impact. This team crafts visual experiences that define brands—logos, graphics, videos, UI layouts, and complete creative systems that capture attention and tell powerful stories.",
+      roles: "Graphic Designers, Video Editors, UI/UX Designers, Motion Designers, Brand Designers.",
+      gradient: "from-pink-400 to-pink-600"
+    },
+    {
+      icon: <Code className="text-white" size={32} />,
+      title: "IT & AI Solutions Team",
+      description: "Our innovation powerhouse—building intelligent systems, custom software, automation tools, websites, apps, and AI-driven solutions for clients across industries. This team shapes the future of digital transformation.",
+      roles: "Full-Stack Developers, AI Engineers, Software Developers, QA Testers, Cloud Engineers, Data Analysts.",
+      gradient: "from-green-400 to-green-600"
+    },
+    {
+      icon: <Megaphone className="text-white" size={32} />,
+      title: "Digital Marketing Team",
+      description: "The team that drives performance, visibility, and conversions. From SEO and paid ads to social media, content, analytics, and automation—this team ensures brands grow with measurable success.",
+      roles: "Digital Marketing Specialists, Social Media Managers, PPC Experts, Content Creators, SEO Analysts.",
+      gradient: "from-orange-400 to-orange-600"
+    },
+    {
+      icon: <Database className="text-white" size={32} />,
+      title: "Enterprise Resource Planning (ERP) System",
+      description: "Manage your entire business from one powerful system. Our ERP solution integrates core operations—finance, HR, inventory, sales, and workflows—into a single, intelligent platform. Automate processes, gain real-time insights, and keep your organization fully aligned and efficient.",
+      tagline: "One system. Total control. Smarter operations.",
+      gradient: "from-indigo-500 to-blue-600",
+      isERP: true
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50">
@@ -121,6 +169,80 @@ const CareersPage = () => {
 
       {/* CTA Section */}
     
+      {/* Our Teams Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+              Our Teams at{" "}
+              <span className="text-green-600">Worknest Connect</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Where Talent Meets Purpose
+            </p>
+            <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
+              At Worknest Connect, our strength comes from five specialized
+              teams working together to deliver end-to-end solutions for our
+              clients. Each team plays a critical role in our growth, and we
+              continuously hire skilled, passionate professionals to join them.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teams.map((team, index) => (
+              <div key={index} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-transparent hover:border-green-400">
+                <div className={`w-16 h-16 bg-gradient-to-br ${team.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                  {team.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors">
+                  {team.title}
+                </h3>
+                {team.tagline && (
+                  <p className="text-lg font-semibold mb-3">
+                    {team.tagline}
+                  </p>
+                )}
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {team.description}
+                </p>
+                
+                {team.features && (
+                  <div className="mb-4">
+                    <h4 className="text-md font-semibold text-gray-800 mb-2">What You'll Get:</h4>
+                    <div className="space-y-1">
+                      {team.features.map((feature, idx) => (
+                        <div key={idx} className="text-sm text-gray-600">
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {team.results && (
+                  <div className="mb-4">
+                    <h4 className="text-md font-semibold text-gray-800 mb-2">Expected Results:</h4>
+                    <div className="space-y-1">
+                      {team.results.map((result, idx) => (
+                        <div key={idx} className="text-sm text-gray-600">
+                          {result}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {team.roles && (
+                  <div className="text-sm text-gray-500 italic">
+                    Ideal roles: {team.roles}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section
         id="benefits"
