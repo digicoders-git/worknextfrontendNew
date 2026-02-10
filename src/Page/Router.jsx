@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import CareersPage from "./Carres";
 import DemoPage from "./Getdemo";
 import AllServices from "./AllServices";
+import Blog from "./Blog";
 
 // Services pages
 import DigitalMarketing from "./Digital_marketing";
@@ -52,8 +53,7 @@ function Router() {
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/getdemo" element={<DemoPage />} />
         <Route path="/Project" element={<Project />} />
-
-        {/* ⭐ Correct Dashboard Routing */}
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </>
   );

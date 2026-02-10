@@ -95,6 +95,8 @@ export default function Navbar() {
     home: { path: "/", category: "Page", title: "Home" },
     contact: { path: "/contact", category: "Page", title: "Contact Us" },
     project: { path: "/Project", category: "Page", title: "Projects" },
+    blog: { path: "/blog", category: "Page", title: "Blog" },
+    articles: { path: "/blog", category: "Page", title: "Blog Articles" },
   };
 
   // Handle search input with live suggestions
@@ -308,6 +310,19 @@ export default function Navbar() {
                 to="/Project"
               >
                 Project
+                <span className="absolute left-1/2 bottom-0 h-0.5 w-0 bg-linear-to-r from-[#013026] to-[#027A55] group-hover:w-full group-hover:left-0 transition-all duration-500"></span>
+                <span className="absolute -inset-2 bg-linear-to-r from-[#013026]/5 to-[#027A55]/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                style={({ isActive }) => ({
+                  color: isActive ? "oklch(72.3% 0.219 149.579)" : "inherit",
+                })}
+                className="relative group px-3 py-3 transition-all duration-300 hover:text-[#012017da]"
+                to="/blog"
+              >
+                Blog
                 <span className="absolute left-1/2 bottom-0 h-0.5 w-0 bg-linear-to-r from-[#013026] to-[#027A55] group-hover:w-full group-hover:left-0 transition-all duration-500"></span>
                 <span className="absolute -inset-2 bg-linear-to-r from-[#013026]/5 to-[#027A55]/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
               </NavLink>
@@ -577,6 +592,7 @@ export default function Navbar() {
                 { path: "/about", name: "About" },
                 { path: "/contact", name: "Contact" },
                 { path: "/Project", name: "Project" },
+                { path: "/blog", name: "Blog" },
               ].map((item) => (
                 <NavLink
                   style={({ isActive }) => ({
