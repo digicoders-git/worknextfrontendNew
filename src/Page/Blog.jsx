@@ -329,20 +329,21 @@ function Blog() {
 
       {/* Blog Detail Modal */}
       {selectedPost && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-fadeIn" onClick={() => setSelectedPost(null)}>
-          <div className="relative bg-white rounded-3xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl animate-fadeUp border border-gray-200" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-md animate-fadeIn" onClick={() => setSelectedPost(null)}>
+          <div className="relative bg-white rounded-2xl sm:rounded-3xl max-w-5xl w-full max-h-[95vh] sm:max-h-[92vh] overflow-hidden shadow-2xl animate-fadeUp border border-gray-200" onClick={(e) => e.stopPropagation()}>
             {/* Close Button */}
             <button
               onClick={() => setSelectedPost(null)}
-              className="absolute top-6 right-6 z-50 p-3 bg-gradient-to-r from-[#013026] to-[#027A55] text-white rounded-full shadow-xl hover:scale-110 transition-all duration-300"
+              className="absolute top-3 right-3 sm:top-6 sm:right-6 z-50 p-2 sm:p-3 bg-gradient-to-r from-[#013026] to-[#027A55] text-white rounded-full shadow-xl hover:scale-110 transition-all duration-300"
             >
-              <X size={18} />
+              <X size={16} className="sm:hidden" />
+              <X size={18} className="hidden sm:block" />
             </button>
 
             {/* Scrollable Content */}
-            <div className="overflow-y-auto max-h-[92vh] scrollbar-thin scrollbar-thumb-[#027A55] scrollbar-track-gray-100">
+            <div className="overflow-y-auto max-h-[95vh] sm:max-h-[92vh] scrollbar-thin scrollbar-thumb-[#027A55] scrollbar-track-gray-100">
               {/* Image Header */}
-              <div className="relative h-96 overflow-hidden">
+              <div className="relative h-48 sm:h-64 md:h-96 overflow-hidden">
                 <img
                   src={selectedPost.image}
                   alt={selectedPost.title}
@@ -351,59 +352,60 @@ function Blog() {
               </div>
 
               {/* Content Section */}
-              <div className="p-8 sm:p-12 bg-gradient-to-b from-white to-gray-50">
+              <div className="p-4 sm:p-8 md:p-12 bg-gradient-to-b from-white to-gray-50">
                 {/* Title & Meta */}
-                <div className="mb-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-5 py-2 bg-gradient-to-r from-[#013026] to-[#027A55] text-white text-sm font-bold rounded-full shadow-xl">
+                <div className="mb-6 sm:mb-8">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                    <span className="px-3 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-[#013026] to-[#027A55] text-white text-xs sm:text-sm font-bold rounded-full shadow-xl">
                       {selectedPost.category}
                     </span>
-                    <div className="flex items-center gap-3 text-gray-500 text-sm">
-                      <div className="flex items-center gap-2">
-                        <Calendar size={14} />
+                    <div className="flex items-center gap-2 sm:gap-3 text-gray-500 text-xs sm:text-sm">
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <Calendar size={12} className="sm:hidden" />
+                        <Calendar size={14} className="hidden sm:block" />
                         <span className="font-semibold">{selectedPost.date}</span>
                       </div>
                       <span>•</span>
                       <span className="font-semibold">{selectedPost.readTime}</span>
                     </div>
                   </div>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">{selectedPost.title}</h2>
+                  <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">{selectedPost.title}</h2>
                 </div>
                 
                 {/* Author */}
-                <div className="flex items-center gap-4 mb-8 pb-6 border-b-2 border-gray-200">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#013026] to-[#027A55] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 pb-4 sm:pb-6 border-b-2 border-gray-200">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-[#013026] to-[#027A55] rounded-full flex items-center justify-center text-white font-bold text-base sm:text-xl shadow-lg flex-shrink-0">
                     W
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 text-lg">{selectedPost.author}</p>
-                    <p className="text-sm text-gray-500">Al Sadd, Doha, Qatar</p>
+                    <p className="font-bold text-gray-900 text-base sm:text-lg">{selectedPost.author}</p>
+                    <p className="text-xs sm:text-sm text-gray-500">Al Sadd, Doha, Qatar</p>
                   </div>
                 </div>
                 
                 {/* Main Content */}
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-xl text-gray-800 leading-relaxed mb-8 font-light italic border-l-4 border-[#027A55] pl-6 bg-gray-50 py-4 rounded-r-lg">
+                <div className="prose prose-sm sm:prose-lg max-w-none">
+                  <p className="text-sm sm:text-xl text-gray-800 leading-relaxed mb-6 sm:mb-8 font-light italic border-l-4 border-[#027A55] pl-4 sm:pl-6 bg-gray-50 py-3 sm:py-4 rounded-r-lg">
                     {selectedPost.excerpt}
                   </p>
                   
-                  <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                  <div className="space-y-4 sm:space-y-6 text-gray-700 leading-relaxed text-sm sm:text-lg">
                     <p>
                       In today's rapidly evolving digital landscape, businesses in Al Sadd, Doha, Qatar and across the GCC region are discovering innovative ways to leverage technology and strategic thinking to achieve unprecedented growth. This comprehensive guide explores the latest trends, best practices, and actionable strategies that are transforming how businesses operate and succeed in Qatar's dynamic market.
                     </p>
                     
-                    <div className="bg-gradient-to-r from-[#013026]/5 to-[#027A55]/5 p-8 rounded-2xl border-l-4 border-[#027A55] my-8">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                        <span className="w-2 h-8 bg-gradient-to-b from-[#013026] to-[#027A55] rounded-full"></span>
+                    <div className="bg-gradient-to-r from-[#013026]/5 to-[#027A55]/5 p-4 sm:p-8 rounded-xl sm:rounded-2xl border-l-4 border-[#027A55] my-6 sm:my-8">
+                      <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                        <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-gradient-to-b from-[#013026] to-[#027A55] rounded-full"></span>
                         Key Insights for Success in Doha
                       </h3>
-                      <p className="text-gray-700">
+                      <p className="text-sm sm:text-base text-gray-700">
                         Understanding the unique dynamics of the Middle Eastern market, particularly in Al Sadd and greater Doha area, is crucial for success. Qatar's business environment offers tremendous opportunities for companies that can adapt their strategies to local preferences while maintaining global standards of excellence.
                       </p>
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-gray-900 mt-10 mb-6">Essential Strategies</h3>
-                    <div className="grid sm:grid-cols-2 gap-4 my-6">
+                    <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mt-8 sm:mt-10 mb-4 sm:mb-6">Essential Strategies</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 my-4 sm:my-6">
                       {[
                         "Strategic planning and implementation",
                         "Data-driven decision making",
@@ -412,41 +414,41 @@ function Blog() {
                         "Innovation and adaptability",
                         "Performance measurement and analytics"
                       ].map((item, idx) => (
-                        <div key={idx} className="flex items-start gap-3 bg-white p-4 rounded-xl border-2 border-gray-100 hover:border-[#027A55]/30 transition-all duration-300 shadow-sm">
-                          <div className="w-6 h-6 bg-gradient-to-r from-[#013026] to-[#027A55] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <div key={idx} className="flex items-start gap-2 sm:gap-3 bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 border-gray-100 hover:border-[#027A55]/30 transition-all duration-300 shadow-sm">
+                          <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-[#013026] to-[#027A55] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-1">
                             <span className="text-white text-xs font-bold">✓</span>
                           </div>
-                          <span className="text-gray-700 font-medium">{item}</span>
+                          <span className="text-xs sm:text-base text-gray-700 font-medium">{item}</span>
                         </div>
                       ))}
                     </div>
                     
-                    <div className="bg-gradient-to-r from-[#013026]/5 to-[#027A55]/5 p-8 rounded-2xl border-l-4 border-[#027A55] my-8">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                        <span className="w-2 h-8 bg-gradient-to-b from-[#013026] to-[#027A55] rounded-full"></span>
+                    <div className="bg-gradient-to-r from-[#013026]/5 to-[#027A55]/5 p-4 sm:p-8 rounded-xl sm:rounded-2xl border-l-4 border-[#027A55] my-6 sm:my-8">
+                      <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
+                        <span className="w-1.5 sm:w-2 h-6 sm:h-8 bg-gradient-to-b from-[#013026] to-[#027A55] rounded-full"></span>
                         Looking Forward in Qatar
                       </h3>
-                      <p className="text-gray-700">
+                      <p className="text-sm sm:text-base text-gray-700">
                         As Doha and Al Sadd continue to position themselves as leading business hubs in the Middle East, companies that embrace innovation, prioritize customer experience, and maintain operational excellence will be best positioned to thrive in Qatar's dynamic market.
                       </p>
                     </div>
 
-                    <p className="text-gray-700 mt-8">
+                    <p className="text-sm sm:text-base text-gray-700 mt-6 sm:mt-8">
                       Whether you're a startup looking to establish your presence in Al Sadd, Doha or an established business seeking to expand across Qatar, understanding these fundamental principles and applying them strategically will help you achieve your goals and build lasting success in Qatar's vibrant business ecosystem.
                     </p>
                   </div>
 
                   {/* CTA Section */}
-                  <div className="mt-12 p-8 bg-gradient-to-br from-[#013026] to-[#027A55] rounded-2xl text-center">
-                    <h4 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business in Doha?</h4>
-                    <p className="text-white/90 mb-2">Visit us at Al Sadd, Doha, Qatar</p>
-                    <p className="text-white/90 mb-6">Let's discuss how we can help you achieve your goals</p>
+                  <div className="mt-8 sm:mt-12 p-6 sm:p-8 bg-gradient-to-br from-[#013026] to-[#027A55] rounded-xl sm:rounded-2xl text-center">
+                    <h4 className="text-lg sm:text-2xl font-bold text-white mb-3 sm:mb-4">Ready to Transform Your Business in Doha?</h4>
+                    <p className="text-sm sm:text-base text-white/90 mb-1 sm:mb-2">Visit us at Al Sadd, Doha, Qatar</p>
+                    <p className="text-sm sm:text-base text-white/90 mb-4 sm:mb-6">Let's discuss how we can help you achieve your goals</p>
                     <button 
                       onClick={() => {
                         setSelectedPost(null);
                         navigate('/contact');
                       }}
-                      className="px-8 py-4 bg-white text-[#013026] font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:scale-105"
+                      className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#013026] font-bold text-sm sm:text-base rounded-lg sm:rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-xl hover:scale-105"
                     >
                       Get in Touch
                     </button>
