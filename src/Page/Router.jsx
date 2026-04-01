@@ -16,6 +16,7 @@ import WebsiteAndAppDevelopment from "./Website_and_App_Development_Service";
 import ITAndAISolutions from "./IT_&_AI_Solutions";
 import BusinessConsulting from "./Business_Consultings";
 import Project from "./Project";
+import Blog from "./Blog";
 
 function Router() {
   return (
@@ -52,6 +53,7 @@ function Router() {
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/getdemo" element={<DemoPage />} />
         <Route path="/Project" element={<Project />} />
+        <Route path="/blog" element={<Blog />} />
 
         {/* ⭐ Correct Dashboard Routing */}
       </Routes>
