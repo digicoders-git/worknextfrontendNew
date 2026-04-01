@@ -26,10 +26,25 @@ const formatDate = (iso) =>
   });
 
 // ─── BLOG DETAIL VIEW ────────────────────────────────────────────────────────
-function BlogDetail({ blog, onBack }) {
+function BlogDetail({ blogId, onBack }) {
+  const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+    // GET /api/blog/:id se fresh data fetch karo
+    axios
+      .get(`${API_URL}/api/blog/${blogId}`)
+      .then((res) => {
+        setBlog(res.data?.data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError("Blog load nahi hua. Please try again.");
+        setLoading(false);
+      });
+  }, [blogId]);
 
   return (
     <div className="overflow-x-hidden">
@@ -41,29 +56,42 @@ function BlogDetail({ blog, onBack }) {
         <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-green-400 rounded-full opacity-20 animate-pulse" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-          {/* Category badge */}
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-4 py-2 mb-6">
-            <span className="text-green-300 font-semibold text-sm">{blog.category}</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg bg-linear-to-r from-[#1FD198] via-white to-[#CFFFE9] bg-clip-text text-transparent">
-            {blog.heading}
-          </h1>
-
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
-            <span className="flex items-center gap-2">
-              <FaUser className="text-green-400" /> {blog.author}
-            </span>
-            <span className="flex items-center gap-2">
-              <FaCalendarAlt className="text-green-400" /> {formatDate(blog.createdAt)}
-            </span>
-          </div>
+          {loading ? (
+            // Hero skeleton
+            <div className="animate-pulse space-y-4">
+              <div className="h-6 bg-white/20 rounded-full w-32 mx-auto" />
+              <div className="h-10 bg-white/20 rounded-xl w-3/4 mx-auto" />
+              <div className="h-10 bg-white/20 rounded-xl w-1/2 mx-auto" />
+            </div>
+          ) : error ? (
+            <h1 className="text-3xl font-bold text-white">Something went wrong</h1>
+          ) : (
+            <>
+              {blog?.category && (
+                <div className="inline-flex items-center bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-4 py-2 mb-6">
+                  <span className="text-green-300 font-semibold text-sm">{blog.category}</span>
+                </div>
+              )}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg bg-linear-to-r from-[#1FD198] via-white to-[#CFFFE9] bg-clip-text text-transparent">
+                {blog?.heading}
+              </h1>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
+                <span className="flex items-center gap-2">
+                  <FaUser className="text-green-400" /> {blog?.author}
+                </span>
+                <span className="flex items-center gap-2">
+                  <FaCalendarAlt className="text-green-400" /> {formatDate(blog?.createdAt)}
+                </span>
+              </div>
+            </>
+          )}
         </div>
       </header>
 
       {/* Content */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-green-50 py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
           {/* Back button */}
           <button
             onClick={() => { onBack(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
@@ -73,34 +101,68 @@ function BlogDetail({ blog, onBack }) {
             Back to Blogs
           </button>
 
-          {/* Blog Image */}
-          <div className="rounded-2xl overflow-hidden shadow-xl mb-10 h-64 sm:h-80 lg:h-96">
-            <img
-              src={getImageUrl(blog.image)}
-              alt={blog.heading}
-              className="w-full h-full object-cover"
-              onError={(e) => { e.target.src = "/logo.png"; }}
-            />
-          </div>
-
-          {/* Tags */}
-          {blog.tags?.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-8">
-              {blog.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="flex items-center gap-1.5 bg-green-100 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full"
-                >
-                  <FaTag className="text-[10px]" /> {tag}
-                </span>
-              ))}
+          {/* Loading skeleton */}
+          {loading && (
+            <div className="animate-pulse space-y-6">
+              <div className="h-72 bg-gray-200 rounded-2xl" />
+              <div className="flex gap-2">
+                <div className="h-6 bg-gray-200 rounded-full w-16" />
+                <div className="h-6 bg-gray-200 rounded-full w-20" />
+              </div>
+              <div className="space-y-3">
+                <div className="h-4 bg-gray-200 rounded w-full" />
+                <div className="h-4 bg-gray-200 rounded w-5/6" />
+                <div className="h-4 bg-gray-200 rounded w-4/6" />
+                <div className="h-4 bg-gray-200 rounded w-full" />
+                <div className="h-4 bg-gray-200 rounded w-3/4" />
+              </div>
             </div>
           )}
 
-          {/* Description */}
-          <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-base sm:text-lg whitespace-pre-line">
-            {blog.description}
-          </div>
+          {/* Error */}
+          {error && !loading && (
+            <div className="text-center py-16">
+              <p className="text-5xl mb-4">⚠️</p>
+              <h3 className="text-xl font-bold text-gray-700">{error}</h3>
+              <button
+                onClick={() => window.location.reload()}
+                className="mt-6 px-6 py-3 bg-gradient-to-r from-[#013026] to-[#027A55] text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300"
+              >
+                Retry
+              </button>
+            </div>
+          )}
+
+          {/* Blog Content */}
+          {!loading && !error && blog && (
+            <>
+              {/* Image */}
+              <div className="rounded-2xl overflow-hidden shadow-xl mb-10 h-64 sm:h-80 lg:h-96">
+                <img
+                  src={getImageUrl(blog.image)}
+                  alt={blog.heading}
+                  className="w-full h-full object-cover"
+                  onError={(e) => { e.target.src = "/logo.png"; }}
+                />
+              </div>
+
+              {/* Tags */}
+              {blog.tags?.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {blog.tags.map((tag, i) => (
+                    <span key={i} className="flex items-center gap-1.5 bg-green-100 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full">
+                      <FaTag className="text-[10px]" /> {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Description */}
+              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-base sm:text-lg whitespace-pre-line">
+                {blog.description}
+              </div>
+            </>
+          )}
         </div>
       </section>
 
@@ -134,7 +196,7 @@ export default function Blog() {
 
   // If a blog is selected → show detail view
   if (selectedBlog) {
-    return <BlogDetail blog={selectedBlog} onBack={() => setSelectedBlog(null)} />;
+    return <BlogDetail blogId={selectedBlog} onBack={() => setSelectedBlog(null)} />;
   }
 
   // Filter — only search, no category filter
@@ -270,7 +332,7 @@ export default function Blog() {
               {filtered.map((blog) => (
                 <div
                   key={blog._id}
-                  onClick={() => setSelectedBlog(blog)}
+                  onClick={() => setSelectedBlog(blog._id)}
                   className="group bg-white rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col"
                 >
                   {/* Image — upar */}
