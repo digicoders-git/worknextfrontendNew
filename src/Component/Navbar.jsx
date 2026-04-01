@@ -95,6 +95,8 @@ export default function Navbar() {
     home: { path: "/", category: "Page", title: "Home" },
     contact: { path: "/contact", category: "Page", title: "Contact Us" },
     project: { path: "/Project", category: "Page", title: "Projects" },
+    blog: { path: "/blog", category: "Page", title: "Blog" },
+    articles: { path: "/blog", category: "Page", title: "Blog Articles" },
   };
 
   // Handle search input with live suggestions
