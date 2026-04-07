@@ -13,9 +13,8 @@ import {
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-// Image URL builder — backend /uploads/ se serve hota hai
-const getImageUrl = (img) =>
-  img ? `${API_URL}/uploads/${img}` : "/logo.png";
+// Cloudinary full URL directly use karo
+const getImageUrl = (img) => img || "/logo.png";
 
 // Date formatter
 const formatDate = (iso) =>
