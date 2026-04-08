@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { motion, AnimatePresence } from "framer-motion";
+import "react-quill-new/dist/quill.snow.css";
 import Footer from "../Component/Footer";
 import {
   FaCalendarAlt,
@@ -14,7 +16,49 @@ import {
 const API_URL = import.meta.env.VITE_API_URL;
 
 // Cloudinary full URL directly use karo
-const getImageUrl = (img) => img || "/logo.png";
+const getImageUrl = (img) => {
+  if (Array.isArray(img)) return img[0] || "/logo.png";
+  return img || "/logo.png";
+};
+
+// ─── IMAGE SLIDER COMPONENT ──────────────────────────────────────────────────
+function ImageSlider({ images, className }) {
+  const [index, setIndex] = useState(0);
+  const imgs = Array.isArray(images) ? images : [images].filter(Boolean);
+
+  useEffect(() => {
+    if (imgs.length <= 1) return;
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % imgs.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [imgs.length]);
+
+  if (imgs.length === 0) return <img src="/logo.png" className={className} alt="blog" />;
+  if (imgs.length === 1) return <img src={imgs[0]} className={className} alt="blog" onError={(e) => (e.target.src = "/logo.png")} />;
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      {imgs.map((img, i) => (
+        <motion.img
+          key={i}
+          src={img}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: i === index ? 1 : 0 }}
+          transition={{ duration: 0.8 }}
+          className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => (e.target.src = "/logo.png")}
+        />
+      ))}
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+        {imgs.map((_, i) => (
+          <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all ${i === index ? "bg-white w-3" : "bg-white/50"}`} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 
 // Date formatter
 const formatDate = (iso) =>
@@ -137,12 +181,7 @@ function BlogDetail({ blogId, onBack }) {
             <>
               {/* Image */}
               <div className="rounded-2xl overflow-hidden shadow-xl mb-10 h-64 sm:h-80 lg:h-96">
-                <img
-                  src={getImageUrl(blog.image)}
-                  alt={blog.heading}
-                  className="w-full h-full object-cover"
-                  onError={(e) => { e.target.src = "/logo.png"; }}
-                />
+                <ImageSlider images={blog.image} className="w-full h-full" />
               </div>
 
               {/* Tags */}
@@ -157,8 +196,8 @@ function BlogDetail({ blogId, onBack }) {
               )}
 
               {/* Description */}
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-base sm:text-lg whitespace-pre-line">
-                {blog.description}
+              <div className="ql-editor !p-0 text-gray-700 text-base sm:text-lg leading-relaxed">
+                <div dangerouslySetInnerHTML={{ __html: blog.description }} />
               </div>
             </>
           )}
@@ -199,10 +238,10 @@ export default function Blog() {
   }
 
   // Filter — only search, no category filter
-  const filtered = blogs.filter(
+  const filtered = (blogs || []).filter(
     (b) =>
-      b.heading?.toLowerCase().includes(search.toLowerCase()) ||
-      b.description?.toLowerCase().includes(search.toLowerCase())
+      b?.heading?.toLowerCase().includes(search.toLowerCase()) ||
+      b?.description?.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -317,7 +356,7 @@ export default function Blog() {
           )}
 
           {/* No Results */}
-          {!loading && !error && filtered.length === 0 && (
+          {!loading && !error && filtered?.length === 0 && (
             <div className="text-center py-24">
               <p className="text-5xl mb-4">🔍</p>
               <h3 className="text-xl font-bold text-gray-700">No articles found</h3>
@@ -326,7 +365,7 @@ export default function Blog() {
           )}
 
           {/* Blogs — sab cards same style: image upar, text neeche, 3 per row */}
-          {!loading && !error && filtered.length > 0 && (
+          {!loading && !error && (filtered?.length || 0) > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filtered.map((blog) => (
                 <div
@@ -336,15 +375,10 @@ export default function Blog() {
                 >
                   {/* Image — upar */}
                   <div className="relative overflow-hidden h-52 sm:h-56 w-full flex-shrink-0">
-                    <img
-                      src={getImageUrl(blog.image)}
-                      alt={blog.heading}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      onError={(e) => { e.target.src = "/logo.png"; }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <ImageSlider images={blog.image} className="w-full h-full group-hover:scale-110 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                     {blog.category && (
-                      <span className="absolute top-3 left-3 bg-gradient-to-r from-[#013026] to-[#027A55] text-white text-xs font-bold px-3 py-1 rounded-full">
+                      <span className="absolute top-3 left-3 bg-gradient-to-r from-[#013026] to-[#027A55] text-white text-xs font-bold px-3 py-1 rounded-full z-10">
                         {blog.category}
                       </span>
                     )}
@@ -355,9 +389,9 @@ export default function Blog() {
                     <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#027A55] transition-colors duration-300 line-clamp-2">
                       {blog.heading}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 flex-1 mb-4">
-                      {blog.description}
-                    </p>
+                    <div className="ql-editor !p-0 text-gray-500 text-sm leading-relaxed line-clamp-3 flex-1 mb-4 [&_*]:!text-gray-500 [&_*]:!text-sm">
+                      <div dangerouslySetInnerHTML={{ __html: blog.description }} />
+                    </div>
 
                     {/* Tags */}
                     {blog.tags?.length > 0 && (
