@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
-import "react-quill-new/dist/quill.snow.css";
 import Footer from "../Component/Footer";
 import {
   FaCalendarAlt,
@@ -196,7 +195,33 @@ function BlogDetail({ blogId, onBack }) {
               )}
 
               {/* Description */}
-              <div className="ql-editor !p-0 text-gray-700 text-base sm:text-lg leading-relaxed">
+              <div className="text-gray-700 text-base sm:text-lg leading-relaxed blog-detail-content">
+                <style>{`
+                  .blog-detail-content img { float: left; max-width: 50%; height: auto; margin: 4px 12px 8px 0; }
+                  .blog-detail-content p { margin: 0.6em 0; min-height: 1.2em; overflow: hidden; }
+                  .blog-detail-content ul { list-style-type: disc !important; padding-left: 2em !important; margin: 0.5em 0 !important; clear: both !important; }
+                  .blog-detail-content ul ul { list-style-type: circle !important; }
+                  .blog-detail-content ul ul ul { list-style-type: square !important; }
+                  .blog-detail-content ol { list-style-type: decimal !important; padding-left: 2em !important; margin: 0.5em 0 !important; clear: both !important; }
+                  .blog-detail-content li { display: list-item !important; }
+                  .blog-detail-content ol[style*="lower-alpha"] { list-style-type: lower-alpha !important; }
+                  .blog-detail-content ol[style*="lower-greek"] { list-style-type: lower-greek !important; }
+                  .blog-detail-content ol[style*="lower-roman"] { list-style-type: lower-roman !important; }
+                  .blog-detail-content ol[style*="upper-alpha"] { list-style-type: upper-alpha !important; }
+                  .blog-detail-content ol[style*="upper-roman"] { list-style-type: upper-roman !important; }
+                  .blog-detail-content iframe { width: 100% !important; min-height: 315px !important; border: none !important; display: block !important; margin: 12px 0 !important; clear: both !important; }
+                  .blog-detail-content video { width: 100% !important; display: block !important; margin: 12px 0 !important; clear: both !important; }
+                  .blog-detail-content h1, .blog-detail-content h2, .blog-detail-content h3 { font-weight: bold; margin: 1em 0 0.5em; clear: both; }
+                  .blog-detail-content h1 { font-size: 1.8em; }
+                  .blog-detail-content h2 { font-size: 1.5em; }
+                  .blog-detail-content h3 { font-size: 1.2em; }
+                  .blog-detail-content a { color: #027A55; text-decoration: underline; }
+                  .blog-detail-content blockquote { border-left: 4px solid #027A55; padding-left: 1em; margin: 1em 0; color: #555; font-style: italic; clear: both; }
+                  .blog-detail-content table { width: 100%; border-collapse: collapse; margin: 1em 0; clear: both; }
+                  .blog-detail-content td, .blog-detail-content th { border: 1px solid #ddd; padding: 8px; }
+                  .blog-detail-content strong { font-weight: bold; }
+                  .blog-detail-content em { font-style: italic; }
+                `}</style>
                 <div dangerouslySetInnerHTML={{ __html: blog.description }} />
               </div>
             </>
