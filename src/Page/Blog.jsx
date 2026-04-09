@@ -389,9 +389,9 @@ export default function Blog() {
                     <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#027A55] transition-colors duration-300 line-clamp-2">
                       {blog.heading}
                     </h3>
-                    <div className="ql-editor !p-0 text-gray-500 text-sm leading-relaxed line-clamp-3 flex-1 mb-4 [&_*]:!text-gray-500 [&_*]:!text-sm">
-                      <div dangerouslySetInnerHTML={{ __html: blog.description }} />
-                    </div>
+                    <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 flex-1 mb-4">
+                      {blog.description?.replace(/<[^>]*>/g, " ").replace(/&[a-z]+;/gi, " ").replace(/\s+/g, " ").trim()}
+                    </p>
 
                     {/* Tags */}
                     {blog.tags?.length > 0 && (
