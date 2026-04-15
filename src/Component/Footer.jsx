@@ -39,10 +39,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 md:pb-10 relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 md:pb-10 relative overflow-hidden w-full max-w-full">
       {/* Glow Animation */}
-      <div className="absolute -top-16 sm:-top-24 md:-top-32 -left-16 sm:-left-24 md:-left-32 w-36 sm:w-48 md:w-72 h-36 sm:h-48 md:h-72 bg-[#A8FFE0] rounded-full opacity-10 animate-ping"></div>
-      <div className="absolute -bottom-16 sm:-bottom-24 md:-bottom-32 -right-16 sm:-right-24 md:-right-32 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-[#A8FFE0] rounded-full opacity-10 animate-ping"></div>
+      <div className="absolute -top-16 sm:-top-24 md:-top-32 -left-16 sm:-left-24 md:-left-32 w-36 sm:w-48 md:w-72 h-36 sm:h-48 md:h-72 bg-[#A8FFE0] rounded-full opacity-10 animate-pulse"></div>
+      <div className="absolute -bottom-16 sm:-bottom-24 md:-bottom-32 -right-16 sm:-right-24 md:-right-32 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-[#A8FFE0] rounded-full opacity-10 animate-pulse"></div>
 
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
         {/* Top Section */}

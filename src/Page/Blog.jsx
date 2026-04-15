@@ -247,7 +247,7 @@ function BlogDetail({ blogId, onBack }) {
               )}
 
               {/* Description */}
-              <div className="blog-detail-content">
+              <div className="blog-detail-content pb-8">
                 <style>{`
                   .blog-detail-content { font-size: 1rem; line-height: 1.8; color: #374151; }
                   .blog-detail-content p { margin: 0.6em 0; min-height: 1.2em; }
@@ -376,7 +376,7 @@ export default function Blog() {
 
 
       {/* ── BLOG GRID ── */}
-      <section className="bg-gradient-to-br from-gray-50 via-white to-green-50 min-h-screen py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-br from-gray-50 via-white to-green-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section Heading */}
