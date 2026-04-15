@@ -148,15 +148,14 @@ function BlogDetail({ blogId, onBack }) {
   return (
     <div className="overflow-x-hidden">
       {/* Hero */}
-      <header className="relative mt-[50px] sm:mt-[30px] bg-linear-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white overflow-hidden">
+      <header className="relative mt-[50px] sm:mt-[30px] text-white overflow-hidden" style={{background: 'linear-gradient(to bottom, #076950, #0d5640, #024a38)'}}>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(31,209,152,0.15),transparent_70%)]" />
+        <div className="absolute inset-0" style={{background: 'radial-gradient(circle at center, rgba(31,209,152,0.15), transparent 70%)'}} />
         <div className="absolute -top-20 -left-20 w-48 h-48 bg-green-400 rounded-full opacity-20 animate-pulse" />
         <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-green-400 rounded-full opacity-20 animate-pulse" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
           {loading ? (
-            // Hero skeleton
             <div className="animate-pulse space-y-4">
               <div className="h-6 bg-white/20 rounded-full w-32 mx-auto" />
               <div className="h-10 bg-white/20 rounded-xl w-3/4 mx-auto" />
@@ -171,16 +170,12 @@ function BlogDetail({ blogId, onBack }) {
                   <span className="text-green-300 font-semibold text-sm">{blog.category}</span>
                 </div>
               )}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg bg-linear-to-r from-[#1FD198] via-white to-[#CFFFE9] bg-clip-text text-transparent">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg" style={{background: 'linear-gradient(to right, #1FD198, white, #CFFFE9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
                 {blog?.heading}
               </h1>
               <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
-                <span className="flex items-center gap-2">
-                  <FaUser className="text-green-400" /> {blog?.author}
-                </span>
-                <span className="flex items-center gap-2">
-                  <FaCalendarAlt className="text-green-400" /> {formatDate(blog?.createdAt)}
-                </span>
+                <span className="flex items-center gap-2"><FaUser className="text-green-400" /> {blog?.author}</span>
+                <span className="flex items-center gap-2"><FaCalendarAlt className="text-green-400" /> {formatDate(blog?.createdAt)}</span>
               </div>
             </>
           )}
@@ -252,32 +247,31 @@ function BlogDetail({ blogId, onBack }) {
               )}
 
               {/* Description */}
-              <div className="text-gray-700 text-base sm:text-lg leading-relaxed blog-detail-content">
+              <div className="blog-detail-content">
                 <style>{`
-                  .blog-detail-content img { float: left; max-width: 50%; height: auto; margin: 4px 12px 8px 0; }
-                  .blog-detail-content p { margin: 0.6em 0; min-height: 1.2em; overflow: hidden; }
-                  .blog-detail-content ul { list-style-type: disc !important; padding-left: 2em !important; margin: 0.5em 0 !important; clear: both !important; }
-                  .blog-detail-content ul ul { list-style-type: circle !important; }
-                  .blog-detail-content ul ul ul { list-style-type: square !important; }
-                  .blog-detail-content ol { list-style-type: decimal !important; padding-left: 2em !important; margin: 0.5em 0 !important; clear: both !important; }
-                  .blog-detail-content li { display: list-item !important; }
-                  .blog-detail-content ol[style*="lower-alpha"] { list-style-type: lower-alpha !important; }
-                  .blog-detail-content ol[style*="lower-greek"] { list-style-type: lower-greek !important; }
-                  .blog-detail-content ol[style*="lower-roman"] { list-style-type: lower-roman !important; }
-                  .blog-detail-content ol[style*="upper-alpha"] { list-style-type: upper-alpha !important; }
-                  .blog-detail-content ol[style*="upper-roman"] { list-style-type: upper-roman !important; }
-                  .blog-detail-content iframe { width: 100% !important; min-height: 315px !important; border: none !important; display: block !important; margin: 12px 0 !important; clear: both !important; }
-                  .blog-detail-content video { width: 100% !important; display: block !important; margin: 12px 0 !important; clear: both !important; }
-                  .blog-detail-content h1, .blog-detail-content h2, .blog-detail-content h3 { font-weight: bold; margin: 1em 0 0.5em; clear: both; }
-                  .blog-detail-content h1 { font-size: 1.8em; }
-                  .blog-detail-content h2 { font-size: 1.5em; }
-                  .blog-detail-content h3 { font-size: 1.2em; }
+                  .blog-detail-content { font-size: 1rem; line-height: 1.8; color: #374151; }
+                  .blog-detail-content p { margin: 0.6em 0; min-height: 1.2em; }
+                  .blog-detail-content h1 { font-size: 2em; font-weight: 700; margin: 1em 0 0.5em; color: #111827; }
+                  .blog-detail-content h2 { font-size: 1.6em; font-weight: 700; margin: 1em 0 0.5em; color: #111827; }
+                  .blog-detail-content h3 { font-size: 1.3em; font-weight: 700; margin: 1em 0 0.5em; color: #111827; }
+                  .blog-detail-content h4 { font-size: 1.1em; font-weight: 700; margin: 0.8em 0 0.4em; }
+                  .blog-detail-content ul { list-style-type: disc; padding-left: 2em; margin: 0.5em 0; }
+                  .blog-detail-content ul ul { list-style-type: circle; }
+                  .blog-detail-content ol { list-style-type: decimal; padding-left: 2em; margin: 0.5em 0; }
+                  .blog-detail-content li { display: list-item; margin: 0.3em 0; }
+                  .blog-detail-content strong, .blog-detail-content b { font-weight: 700; }
+                  .blog-detail-content em, .blog-detail-content i { font-style: italic; }
+                  .blog-detail-content u { text-decoration: underline; }
                   .blog-detail-content a { color: #027A55; text-decoration: underline; }
-                  .blog-detail-content blockquote { border-left: 4px solid #027A55; padding-left: 1em; margin: 1em 0; color: #555; font-style: italic; clear: both; }
-                  .blog-detail-content table { width: 100%; border-collapse: collapse; margin: 1em 0; clear: both; }
+                  .blog-detail-content blockquote { border-left: 4px solid #027A55; padding-left: 1em; margin: 1em 0; color: #555; font-style: italic; background: #f9fafb; border-radius: 0 8px 8px 0; }
+                  .blog-detail-content img { max-width: 100%; height: auto; display: block; margin: 12px auto; border-radius: 8px; }
+                  .blog-detail-content table { width: 100%; border-collapse: collapse; margin: 1em 0; }
                   .blog-detail-content td, .blog-detail-content th { border: 1px solid #ddd; padding: 8px; }
-                  .blog-detail-content strong { font-weight: bold; }
-                  .blog-detail-content em { font-style: italic; }
+                  .blog-detail-content th { background: #f3f4f6; font-weight: 700; }
+                  .blog-detail-content iframe { width: 100%; min-height: 315px; border: none; display: block; margin: 12px 0; }
+                  .blog-detail-content video { width: 100%; display: block; margin: 12px 0; }
+                  .blog-detail-content pre { background: #1f2937; color: #f9fafb; padding: 1em; border-radius: 8px; overflow-x: auto; margin: 1em 0; }
+                  .blog-detail-content code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.9em; }
                 `}</style>
                 <div dangerouslySetInnerHTML={{ __html: blog.description }} />
               </div>
@@ -329,11 +323,11 @@ export default function Blog() {
   return (
     <div className="overflow-x-hidden">
       {/* ── HERO ── */}
-      <header className="relative mt-[50px] sm:mt-[30px] bg-linear-to-b from-[#076950] via-[#0d5640] to-[#024a38] text-white overflow-hidden">
+      <header className="relative mt-[50px] sm:mt-[30px] text-white overflow-hidden" style={{background: 'linear-gradient(to bottom, #076950, #0d5640, #024a38)'}}>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center" />
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(31,209,152,0.15),transparent_70%)]" />
-          <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-green-300 to-transparent" />
+          <div className="absolute inset-0" style={{background: 'radial-gradient(circle at center, rgba(31,209,152,0.15), transparent 70%)'}} />
+          <div className="absolute top-0 left-0 right-0 h-px" style={{background: 'linear-gradient(to right, transparent, #86efac, transparent)'}} />
         </div>
         <div className="absolute -top-20 -left-20 sm:-top-32 sm:-left-32 w-48 h-48 sm:w-72 sm:h-72 bg-green-400 rounded-full opacity-20 animate-pulse" />
         <div className="absolute -bottom-20 -right-20 sm:-bottom-32 sm:-right-32 w-64 h-64 sm:w-96 sm:h-96 bg-green-400 rounded-full opacity-20 animate-pulse" />
@@ -353,10 +347,10 @@ export default function Blog() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
-            <span className="bg-linear-to-r from-[#1FD198] via-white to-[#CFFFE9] bg-clip-text text-transparent">
+            <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(to right, #1FD198, white, #CFFFE9)'}}>
               Our Blog
             </span>
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-linear-to-r from-green-300 to-green-100 bg-clip-text mt-3">
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text mt-3" style={{backgroundImage: 'linear-gradient(to right, #86efac, #dcfce7)'}}>
               Knowledge That Drives Growth
             </span>
           </h1>
