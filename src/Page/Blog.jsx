@@ -148,9 +148,9 @@ function BlogDetail({ blogId, onBack }) {
   return (
     <div className="overflow-x-hidden">
       {/* Hero */}
-      <header className="relative mt-[50px] sm:mt-[30px] text-white overflow-hidden" style={{background: 'linear-gradient(to bottom, #076950, #0d5640, #024a38)'}}>
+      <header className="relative mt-[50px] sm:mt-[30px] text-white overflow-hidden" style={{ background: 'linear-gradient(to bottom, #076950, #0d5640, #024a38)' }}>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center" />
-        <div className="absolute inset-0" style={{background: 'radial-gradient(circle at center, rgba(31,209,152,0.15), transparent 70%)'}} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(31,209,152,0.15), transparent 70%)' }} />
         <div className="absolute -top-20 -left-20 w-48 h-48 bg-green-400 rounded-full opacity-20 animate-pulse" />
         <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-green-400 rounded-full opacity-20 animate-pulse" />
 
@@ -170,7 +170,7 @@ function BlogDetail({ blogId, onBack }) {
                   <span className="text-green-300 font-semibold text-sm">{blog.category}</span>
                 </div>
               )}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg" style={{background: 'linear-gradient(to right, #1FD198, white, #CFFFE9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg" style={{ background: 'linear-gradient(to right, #1FD198, white, #CFFFE9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 {blog?.heading}
               </h1>
               <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
@@ -184,7 +184,7 @@ function BlogDetail({ blogId, onBack }) {
 
       {/* Content */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-green-50 py-12 sm:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Back button */}
           <button
@@ -231,7 +231,7 @@ function BlogDetail({ blogId, onBack }) {
           {!loading && !error && blog && (
             <>
               {/* Image */}
-              <div className="rounded-2xl overflow-hidden shadow-xl mb-10 h-64 sm:h-80 lg:h-96">
+              <div className="rounded-2xl overflow-hidden shadow-xl mb-10 h-75 sm:h-96 lg:h-140">
                 <ImageSlider images={blog.image} className="w-full h-full" />
               </div>
 
@@ -323,11 +323,11 @@ export default function Blog() {
   return (
     <div className="overflow-x-hidden">
       {/* ── HERO ── */}
-      <header className="relative mt-[50px] sm:mt-[30px] text-white overflow-hidden" style={{background: 'linear-gradient(to bottom, #076950, #0d5640, #024a38)'}}>
+      <header className="relative mt-[50px] sm:mt-[30px] text-white overflow-hidden" style={{ background: 'linear-gradient(to bottom, #076950, #0d5640, #024a38)' }}>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&auto=format&fit=crop')] opacity-10 bg-cover bg-center" />
         <div className="absolute inset-0">
-          <div className="absolute inset-0" style={{background: 'radial-gradient(circle at center, rgba(31,209,152,0.15), transparent 70%)'}} />
-          <div className="absolute top-0 left-0 right-0 h-px" style={{background: 'linear-gradient(to right, transparent, #86efac, transparent)'}} />
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(31,209,152,0.15), transparent 70%)' }} />
+          <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(to right, transparent, #86efac, transparent)' }} />
         </div>
         <div className="absolute -top-20 -left-20 sm:-top-32 sm:-left-32 w-48 h-48 sm:w-72 sm:h-72 bg-green-400 rounded-full opacity-20 animate-pulse" />
         <div className="absolute -bottom-20 -right-20 sm:-bottom-32 sm:-right-32 w-64 h-64 sm:w-96 sm:h-96 bg-green-400 rounded-full opacity-20 animate-pulse" />
@@ -347,10 +347,10 @@ export default function Blog() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
-            <span className="bg-clip-text text-transparent" style={{backgroundImage: 'linear-gradient(to right, #1FD198, white, #CFFFE9)'}}>
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #1FD198, white, #CFFFE9)' }}>
               Our Blog
             </span>
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text mt-3" style={{backgroundImage: 'linear-gradient(to right, #86efac, #dcfce7)'}}>
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-transparent bg-clip-text mt-3" style={{ backgroundImage: 'linear-gradient(to right, #86efac, #dcfce7)' }}>
               Knowledge That Drives Growth
             </span>
           </h1>
