@@ -20,37 +20,94 @@ const getImageUrl = (img) => {
   return img || "/logo.png";
 };
 
-// ─── IMAGE SLIDER COMPONENT ──────────────────────────────────────────────────
-function ImageSlider({ images, className }) {
+// ─── DETECT MEDIA TYPE ───────────────────────────────────────────────────────
+const getMediaType = (url = "") => {
+  const u = url.toLowerCase().split("?")[0];
+  if (/\.(mp4|webm|ogg|mov)$/.test(u)) return "video";
+  if (/\.(mp3|wav|ogg|aac|m4a)$/.test(u)) return "audio";
+  if (/\.pdf$/.test(u)) return "pdf";
+  if (/\.(gif)$/.test(u)) return "gif";
+  if (/\.(json)$/.test(u)) return "lottie";
+  return "image";
+};
+
+// ─── SINGLE MEDIA ITEM ───────────────────────────────────────────────────────
+function MediaItem({ src, className, isCard = false }) {
+  const type = getMediaType(src);
+
+  if (type === "video") return (
+    <video
+      src={src}
+      className={`w-full h-full object-cover ${className}`}
+      autoPlay muted loop playsInline
+    />
+  );
+
+  if (type === "audio") return (
+    <div className={`flex flex-col items-center justify-center bg-gradient-to-br from-green-900 to-[#013026] w-full h-full ${className}`}>
+      <span className="text-4xl mb-3">🎵</span>
+      {!isCard && <audio src={src} controls className="w-full max-w-xs" />}
+      {isCard && <p className="text-white text-xs font-semibold">Audio</p>}
+    </div>
+  );
+
+  if (type === "pdf") return (
+    <div className={`flex flex-col items-center justify-center bg-gradient-to-br from-red-900 to-red-700 w-full h-full ${className}`}>
+      <span className="text-4xl mb-2">📄</span>
+      <p className="text-white text-xs font-semibold">PDF Document</p>
+      {!isCard && (
+        <a href={src} target="_blank" rel="noreferrer"
+          className="mt-3 px-4 py-1.5 bg-white text-red-700 text-xs font-bold rounded-full hover:scale-105 transition-all">
+          Open PDF
+        </a>
+      )}
+    </div>
+  );
+
+  if (type === "gif") return (
+    <img src={src} className={`w-full h-full object-cover ${className}`} alt="animation" />
+  );
+
+  // default: image
+  return (
+    <img
+      src={src}
+      className={`w-full h-full object-cover ${className}`}
+      alt="blog"
+      onError={(e) => (e.target.src = "/logo.png")}
+    />
+  );
+}
+
+// ─── MEDIA SLIDER (replaces ImageSlider) ─────────────────────────────────────
+function ImageSlider({ images, className, isCard = false }) {
   const [index, setIndex] = useState(0);
-  const imgs = Array.isArray(images) ? images : [images].filter(Boolean);
+  const items = Array.isArray(images) ? images.filter(Boolean) : [images].filter(Boolean);
 
   useEffect(() => {
-    if (imgs.length <= 1) return;
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % imgs.length);
-    }, 4000);
+    if (items.length <= 1) return;
+    const interval = setInterval(() => setIndex((p) => (p + 1) % items.length), 4000);
     return () => clearInterval(interval);
-  }, [imgs.length]);
+  }, [items.length]);
 
-  if (imgs.length === 0) return <img src="/logo.png" className={className} alt="blog" />;
-  if (imgs.length === 1) return <img src={imgs[0]} className={className} alt="blog" onError={(e) => (e.target.src = "/logo.png")} />;
+  if (items.length === 0) return <img src="/logo.png" className={className} alt="blog" />;
+  if (items.length === 1) return <MediaItem src={items[0]} className={className} isCard={isCard} />;
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
-      {imgs.map((img, i) => (
-        <motion.img
+      {items.map((src, i) => (
+        <motion.div
           key={i}
-          src={img}
           initial={{ opacity: 0 }}
           animate={{ opacity: i === index ? 1 : 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={(e) => (e.target.src = "/logo.png")}
-        />
+          className="absolute inset-0 w-full h-full"
+        >
+          <MediaItem src={src} className="w-full h-full" isCard={isCard} />
+        </motion.div>
       ))}
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
-        {imgs.map((_, i) => (
+        {items.map((_, i) => (
           <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all ${i === index ? "bg-white w-3" : "bg-white/50"}`} />
         ))}
       </div>
@@ -400,7 +457,7 @@ export default function Blog() {
                 >
                   {/* Image — upar */}
                   <div className="relative overflow-hidden h-52 sm:h-56 w-full flex-shrink-0">
-                    <ImageSlider images={blog.image} className="w-full h-full group-hover:scale-110 transition-transform duration-700" />
+                    <ImageSlider images={blog.image} className="w-full h-full group-hover:scale-110 transition-transform duration-700" isCard={true} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                     {blog.category && (
                       <span className="absolute top-3 left-3 bg-gradient-to-r from-[#013026] to-[#027A55] text-white text-xs font-bold px-3 py-1 rounded-full z-10">
