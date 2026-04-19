@@ -184,7 +184,7 @@ function BlogDetail({ blogId, onBack }) {
 
       {/* Content */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-green-50 py-12 sm:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-2 sm:px-3 lg:px-5">
 
           {/* Back button */}
           <button
@@ -230,10 +230,28 @@ function BlogDetail({ blogId, onBack }) {
           {/* Blog Content */}
           {!loading && !error && blog && (
             <>
-              {/* Image */}
-              <div className="rounded-2xl overflow-hidden shadow-xl mb-10 h-75 sm:h-96 lg:h-140">
-                <ImageSlider images={blog.image} className="w-full h-full" />
-              </div>
+              {/* TOP MEDIA - YouTube ya Image */}
+              {blog.youtubeUrl ? (
+                <div className="mb-10 rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${
+                        blog.youtubeUrl.includes("youtu.be/")
+                          ? blog.youtubeUrl.split("youtu.be/")[1]?.split("?")[0]
+                          : new URLSearchParams(new URL(blog.youtubeUrl).search).get("v")
+                      }`}
+                      className="absolute inset-0 w-full h-full"
+                      allowFullScreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      title="YouTube Video"
+                    />
+                  </div>
+                </div>
+              ) : blog.image?.length > 0 && (
+                <div className="rounded-2xl overflow-hidden shadow-xl mb-10 h-75 sm:h-96 lg:h-140">
+                  <ImageSlider images={blog.image} className="w-full h-full" />
+                </div>
+              )}
 
               {/* Tags */}
               {blog.tags?.length > 0 && (
@@ -451,7 +469,27 @@ export default function Blog() {
                 >
                   {/* Image — upar */}
                   <div className="relative overflow-hidden h-52 sm:h-56 w-full flex-shrink-0">
-                    <ImageSlider images={blog.image} className="w-full h-full group-hover:scale-110 transition-transform duration-700" isCard={true} />
+                    {blog.youtubeUrl ? (
+                      <>
+                        <img
+                          src={`https://img.youtube.com/vi/${
+                            blog.youtubeUrl.includes("youtu.be/")
+                              ? blog.youtubeUrl.split("youtu.be/")[1]?.split("?")[0]
+                              : new URLSearchParams(new URL(blog.youtubeUrl).search).get("v")
+                          }/hqdefault.jpg`}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          alt={blog.heading}
+                          onError={(e) => (e.target.src = "/logo.png")}
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="bg-red-600 rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+                            <span className="text-white text-xl ml-1">▶</span>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <ImageSlider images={blog.image} className="w-full h-full group-hover:scale-110 transition-transform duration-700" isCard={true} />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                     {blog.category && (
                       <span className="absolute top-3 left-3 bg-gradient-to-r from-[#013026] to-[#027A55] text-white text-xs font-bold px-3 py-1 rounded-full z-10">
