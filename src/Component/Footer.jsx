@@ -89,7 +89,7 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-              
+
               {/* Second Row - 3 Icons */}
               <div className="flex justify-center gap-4 sm:gap-5 md:gap-6">
                 {[
@@ -103,7 +103,7 @@ const Footer = () => {
                   },
                   {
                     icon: <FaWhatsapp />,
-                    link: "https://wa.me/97431175515",
+                    link: "https://wa.me/97431175511",
                   },
                 ].map((item, i) => (
                   <a
@@ -175,14 +175,22 @@ const Footer = () => {
                     info@worknestconnect.com
                   </a>
                 </li>
-                <li className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:items-center gap-1 sm:gap-0">
-                  <FaPhoneAlt className="sm:mr-2 text-green-400 text-base sm:text-lg" />
-                  <a
-                    href="tel:+97431175515"
-                    className="hover:text-green-400 transition text-xs sm:text-sm md:text-base"
-                  >
-                    +974 3117 5515
-                  </a>
+                <li className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:items-start gap-1 sm:gap-0">
+                  <FaPhoneAlt className="sm:mr-2 text-green-400 text-base sm:text-lg mt-1" />
+                  <div className="flex flex-col items-center lg:items-start">
+                    <a
+                      href="tel:+97431171127"
+                      className="hover:text-green-400 transition text-xs sm:text-sm md:text-base"
+                    >
+                      +974 3117 1127
+                    </a>
+                    <a
+                      href="tel:+97431175511"
+                      className="hover:text-green-400 transition text-xs sm:text-sm md:text-base"
+                    >
+                      +974 3117 5511
+                    </a>
+                  </div>
                 </li>
 
                 <li className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:items-start gap-1 sm:gap-0">

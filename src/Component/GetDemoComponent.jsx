@@ -135,7 +135,22 @@ export default function ContactSection() {
                     {
                       icon: <Phone size={20} />,
                       title: "Phone",
-                      value: "+974 3117 5515",
+                      value: (
+                        <div className="flex flex-col gap-0.5">
+                          <a
+                            href="tel:+97431171127"
+                            className="hover:text-emerald-600 transition duration-300 block"
+                          >
+                            +974 3117 1127
+                          </a>
+                          <a
+                            href="tel:+97431175511"
+                            className="hover:text-emerald-600 transition duration-300 block"
+                          >
+                            +974 3117 5511
+                          </a>
+                        </div>
+                      ),
                     },
                   ].map((item, i) => (
                     <motion.div
@@ -193,7 +208,7 @@ export default function ContactSection() {
                         icon: <Youtube size={18} />,
                       },
                       {
-                        link: "https://wa.me/97431175515",
+                        link: "https://wa.me/97431175511",
                         icon: <FaWhatsapp size={18} />,
                       },
                     ].map((s, i) => (
@@ -270,7 +285,7 @@ export default function ContactSection() {
 
                       <div className="min-w-0 flex-1">
                         <h4 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">
-                           {item.title}
+                          {item.title}
                         </h4>
                         <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
                       </div>

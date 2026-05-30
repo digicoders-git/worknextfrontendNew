@@ -436,14 +436,26 @@ export default function ContactHeader() {
               </a>
 
               {/* Phone */}
-              <a
-                href="tel:+97431175515"
+              <div
                 className="block p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2"
               >
                 <FaPhone className="text-4xl text-emerald-600 mx-auto mb-4" />
                 <h3 className="font-bold text-xl text-gray-800">Phone</h3>
-                <p className="text-gray-600 mt-2">+974 3117 5515</p>
-              </a>
+                <div className="text-gray-600 mt-2 flex flex-col gap-1">
+                  <a
+                    href="tel:+97431171127"
+                    className="hover:text-emerald-600 transition duration-300 block"
+                  >
+                    +974 3117 1127
+                  </a>
+                  <a
+                    href="tel:+97431175511"
+                    className="hover:text-emerald-600 transition duration-300 block"
+                  >
+                    +974 3117 5511
+                  </a>
+                </div>
+              </div>
 
               {/* Location */}
               <a
@@ -522,7 +534,7 @@ export default function ContactHeader() {
               </a>
 
               <a
-                href="https://wa.me/97431175515"
+                href="https://wa.me/97431175511"
                 target="_blank"
                 rel="noreferrer"
                 className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
