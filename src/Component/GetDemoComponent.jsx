@@ -208,7 +208,7 @@ export default function ContactSection() {
                         icon: <Youtube size={18} />,
                       },
                       {
-                        link: "https://wa.me/97431175511",
+                        link: "https://wa.me/97431171127",
                         icon: <FaWhatsapp size={18} />,
                       },
                     ].map((s, i) => (

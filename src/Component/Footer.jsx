@@ -103,7 +103,7 @@ const Footer = () => {
                   },
                   {
                     icon: <FaWhatsapp />,
-                    link: "https://wa.me/97431175511",
+                    link: "https://wa.me/97431171127",
                   },
                 ].map((item, i) => (
                   <a

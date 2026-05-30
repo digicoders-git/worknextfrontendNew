@@ -534,7 +534,7 @@ export default function ContactHeader() {
               </a>
 
               <a
-                href="https://wa.me/97431175511"
+                href="https://wa.me/97431171127"
                 target="_blank"
                 rel="noreferrer"
                 className="w-14 h-14 flex items-center justify-center bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 hover:scale-110 transition-all"
