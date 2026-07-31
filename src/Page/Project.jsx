@@ -45,6 +45,38 @@ const Project = () => {
 
   const projects = [
     {
+      id: 99,
+      title: "MSA Trading and Services",
+      category: "web",
+      description:
+        "A modern, high-performance website for MSA Trading and Services, designed to showcase their business offerings and streamline client interactions.",
+      image: "/image copy 10.png",
+      images: ["/image copy 10.png"],
+      technologies: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "JavaScript"
+      ],
+      client: "MSA Trading and Services",
+      duration: "2 months",
+      year: "2026",
+      status: "Completed",
+      projectUrl: "https://msa-website-tan.vercel.app/",
+      featured: true,
+      results: "Improved brand presence and customer engagement",
+      likes: 120,
+      views: 850,
+      highlights: [
+        "Modern and responsive design",
+        "High performance and fast loading",
+        "Clear presentation of services",
+        "User-friendly navigation"
+      ],
+      fullDescription:
+        "A modern, high-performance website developed for MSA Trading and Services. The platform was built with React and Vite to ensure speed and a smooth user experience, showcasing their business offerings and streamlining client interactions effectively.",
+    },
+    {
       id: 0,
       title: "ATC Website",
       category: "web",
