@@ -459,7 +459,7 @@ export default function ContactHeader() {
 
               {/* Location */}
               <a
-                href="https://www.google.com/maps/search/?api=1&query=1st+floor,+Apartment+4+Building+No.+33,+Street+180,+Zone+55,+Al+Rayyan,+Doha,+Qatar"
+                href="https://www.google.com/maps/search/?api=1&query=4th+Floor,+Office+405,+Room+09,+Central+Complex,+Near+Doha+Municipality,+B+Ring+Rd,+Doha,+Qatar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-8 rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg hover:shadow-2xl transition-all duration-300 border border-emerald-200 hover:-translate-y-2"
@@ -467,10 +467,10 @@ export default function ContactHeader() {
                 <FaMapMarkerAlt className="text-4xl text-emerald-600 mx-auto mb-4" />
                 <h3 className="font-bold text-xl text-gray-800">Location</h3>
                 <p className="text-gray-600 mt-3 leading-relaxed">
-                  1st Floor, Apartment 4<br />
-                  Building No. 33, Street 180
+                  4th Floor, Office 405, Room 09<br />
+                  Central Complex, Near Doha Municipality
                   <br />
-                  Zone 55, Al Rayyan – Doha, Qatar
+                  B Ring Rd, Doha, Qatar
                 </p>
               </a>
             </div>

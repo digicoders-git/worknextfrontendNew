@@ -19,24 +19,24 @@ const LogoSlider = () => {
   ];
 
   return (
-    <div className="py-10 bg-white overflow-hidden relative w-full flex flex-col items-center">
-      <div className="max-w-7xl w-full mx-auto px-4 mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0F4F3C]">
-          Our Trusted Partners & Clients
+    <div className="py-12 bg-gray-100 overflow-hidden relative w-full flex flex-col items-center">
+      <div className="max-w-7xl w-full mx-auto px-4 mb-10">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-black">
+          Our Clients
         </h2>
       </div>
-      <div className="max-w-7xl w-full mx-auto overflow-hidden relative">
-        <div className="flex w-[200%] animate-marquee items-center mt-6">
+      <div className="w-full overflow-hidden relative">
+        <div className="flex w-[200%] animate-marquee items-center mt-2">
           {/* We double the logos to create an infinite scroll effect */}
           {[...logos, ...logos].map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-4 flex items-center justify-center h-24 sm:h-28"
+              className="flex-shrink-0 mx-3 flex items-center justify-center h-40 w-52 sm:h-36 sm:w-80 bg-white shadow-sm rounded-md overflow-hidden p-[2px]"
             >
               <img
                 src={logo}
                 alt={`Client Logo ${index}`}
-                className="h-full w-auto object-contain transition-all duration-300 transform hover:scale-110"
+                className="w-full h-full object-contain scale-[1.7] transition-all duration-300 transform hover:scale-[1.8]"
               />
             </div>
           ))}

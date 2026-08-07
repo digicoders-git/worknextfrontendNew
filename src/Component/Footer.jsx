@@ -196,13 +196,12 @@ const Footer = () => {
                 <li className="flex flex-col sm:flex-row justify-center lg:justify-start items-center sm:items-start gap-1 sm:gap-0">
                   <FaMapMarkerAlt className="sm:mr-2 text-green-400 text-xl sm:text-2xl md:text-3xl flex-shrink-0" />
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=1st+floor,+Apartment+4+Building+No.+33,+Street+180,+Zone+55,+Al+Rayyan+-+Doha,+Qatar"
+                    href="https://www.google.com/maps/search/?api=1&query=4th+Floor,+Office+405,+Room+09,+Central+Complex,+Near+Doha+Municipality,+B+Ring+Rd,+Doha,+Qatar"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-green-400 transition text-xs sm:text-sm md:text-base leading-relaxed text-center sm:text-left"
                   >
-                    1st floor, Apartment 4 Building No. 33, Street 180, Zone 55,
-                    Al Rayyan - Doha, Qatar
+                    4th Floor, Office 405, Room 09, Central Complex, Near Doha Municipality, B Ring Rd, Doha, Qatar
                   </a>
                 </li>
 
