@@ -3,6 +3,7 @@ import { TranslateProvider } from "./Component/GoogleTranslateProvider";
 import SidebarText from "./Component/Lebal";
 import Navbar from "./Component/Navbar";
 import ScrollToTopOnRoute from "./Component/ScrollToTopOnRoute";
+import QuickContactButtons from "./Component/QuickContactButtons";
 import Router from "./Page/Router";
 import ScrollToTopButton from "./Page/ScrollToTop";
 
@@ -30,6 +31,7 @@ function App() {
         <SidebarText />
         <Navbar />
         <Router />
+        <QuickContactButtons />
         <ScrollToTopButton />
       </TranslateProvider>
     </>
