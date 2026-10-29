@@ -2,20 +2,39 @@ import React from 'react';
 
 const LogoSlider = () => {
   const logos = [
-    "/logo/1_20260727_114420_0000.png",
-    "/logo/2_20260727_114420_0001.png",
-    "/logo/3_20260727_114420_0002.png",
-    "/logo/4_20260727_114420_0003.png",
-    "/logo/5_20260727_114420_0004.png",
-    "/logo/6_20260727_114420_0005.png",
-    "/logo/7_20260727_114420_0006.png",
-    "/logo/8_20260727_114421_0007.png",
-    "/logo/10_20260727_114421_0009.png",
-    "/logo/11_20260727_114421_0010.png",
-    "/logo/12_20260727_114421_0011.png",
-    "/logo/13_20260727_114421_0012.png",
-    "/logo/14_20260727_114421_0013.png",
-    "/logo/Divine Perfume Logo.jpg.jpeg",
+    "/WNC All Clients/1.png",
+    "/WNC All Clients/2.png",
+    "/WNC All Clients/3.png",
+    "/WNC All Clients/4.png",
+    "/WNC All Clients/5.png",
+    "/WNC All Clients/6.png",
+    "/WNC All Clients/7.png",
+    "/WNC All Clients/8.png",
+    "/WNC All Clients/9.png",
+    "/WNC All Clients/10.png",
+    "/WNC All Clients/11.png",
+    "/WNC All Clients/12.png",
+    "/WNC All Clients/13.png",
+    "/WNC All Clients/14.png",
+    "/WNC All Clients/15.png",
+    "/WNC All Clients/16.png",
+    "/WNC All Clients/17.png",
+    "/WNC All Clients/18.png",
+    "/WNC All Clients/19.png",
+    "/WNC All Clients/20.png",
+    "/WNC All Clients/21.png",
+    "/WNC All Clients/22.png",
+    "/WNC All Clients/23.png",
+    "/WNC All Clients/24.png",
+    "/WNC All Clients/25.png",
+    "/WNC All Clients/26.png",
+    "/WNC All Clients/27.png",
+    "/WNC All Clients/28.png",
+    "/WNC All Clients/29.png",
+    "/WNC All Clients/30.png",
+    "/WNC All Clients/31.png",
+    "/WNC All Clients/32.png",
+    "/WNC All Clients/33.png",
   ];
 
   return (
@@ -26,7 +45,10 @@ const LogoSlider = () => {
         </h2>
       </div>
       <div className="w-full overflow-hidden relative">
-        <div className="flex w-[200%] animate-marquee items-center mt-2">
+        <div 
+          className="flex w-max animate-marquee hover:[animation-play-state:paused] items-center mt-2"
+          style={{ animationDuration: "50s" }}
+        >
           {/* We double the logos to create an infinite scroll effect */}
           {[...logos, ...logos].map((logo, index) => (
             <div
@@ -35,8 +57,9 @@ const LogoSlider = () => {
             >
               <img
                 src={logo}
-                alt={`Client Logo ${index}`}
+                alt={`Client Logo ${(index % logos.length) + 1}`}
                 className="w-full h-full object-contain scale-[1.7] transition-all duration-300 transform hover:scale-[1.8]"
+                loading="lazy"
               />
             </div>
           ))}
